@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/salumee.css">
 </head>
 <body class="page-paninoteca">
-<!-- Generato da tools/build.py a partire da src/ e data/. Modificare quei file, non questo. -->
+<!-- Export statico: modificare HTML, CSS e JavaScript come indicato nel README. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-ne" viewBox="0 0 16 16"><path d="M3.5 12.5 12 4M5.2 3.6H12.4v7.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
   <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 1.5v12M3.2 8.8 8 13.6l4.8-4.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
@@ -28,26 +28,13 @@
 <header class="site-header">
   <nav class="site-nav" aria-label="Principale">
     <a class="brand" href="index.html"><img class="logo" src="assets/img/logo-salumee.webp" width="906" height="652" alt="Salumée Bellinzona, pagina iniziale"></a>
+    <div class="department-switch" role="group" aria-label="Scegli reparto"><a class="department-link" href="index.html">Macelleria</a><a class="department-link" href="paninoteca.html" aria-current="page">Paninoteca</a></div>
     <a class="nav-quick" href="#ritiro">Ordina</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Apri la navigazione"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
     <div class="nav-panel" id="nav-panel">
       <ul class="nav-list">
-        <li class="nav-item has-sub">
-          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="sub-macelleria">Macelleria <svg class="ico chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
-          <ul class="nav-sub" id="sub-macelleria">
-            <li><a href="macelleria.html#prosciutti">Prosciutti al banco</a></li>
-            <li><a href="macelleria.html#carni">Carni e specialità</a></li>
-            <li><a href="macelleria.html#grigliate">Grigliate</a></li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub is-current">
-          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="sub-paninoteca">Paninoteca<span class="sr-only"> (sei qui)</span> <svg class="ico chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
-          <ul class="nav-sub" id="sub-paninoteca">
-            <li><a href="paninoteca.html#focacce">Le focacce</a></li>
-            <li><a href="paninoteca.html#menu">Il menu</a></li>
-            <li><a href="paninoteca.html#ritiro">Ordina per il ritiro</a></li>
-          </ul>
-        </li>
+
+
         <li class="nav-item"><a class="nav-link" href="index.html#eventi">Eventi e novità</a></li>
         <li class="nav-item"><a class="nav-link" href="#sedi">Dove siamo</a></li>
       </ul>
@@ -252,8 +239,8 @@
   <img class="footer-logo" src="assets/img/logo-salumee.webp" width="906" height="652" loading="lazy" decoding="async" alt="Salumée Bellinzona">
   <div class="footer-meta">
     <p>Macelleria · Paninoteca · Bellinzona &amp; Claro</p>
-    <p><a href="https://www.instagram.com/salumee.bellinzona/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (si apre in una nuova scheda)</span></a> · <a href="index.html">Pagina iniziale</a> · <a href="macelleria.html">Macelleria</a> · <a href="paninoteca.html">Paninoteca</a></p>
-    <p>Proposta di design, non pubblicata. Focacce: immagini illustrative (AI). Castello: illustrazione provvisoria ispirata a Castelgrande. Logo, insegna, banco e foto del menu: riferimenti dai canali Salumée.</p>
+    <p><a href="https://www.instagram.com/salumee.bellinzona/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (si apre in una nuova scheda)</span></a> · <a href="index.html">Pagina iniziale</a> · <a href="index.html">Macelleria</a> · <a href="paninoteca.html">Paninoteca</a></p>
+    <p>Proposta di design, non pubblicata. Focacce: immagini illustrative (AI). Logo, insegna, banco e foto del menu: riferimenti dai canali Salumée.</p>
   </div>
 </footer>
 <div class="travel-layer" aria-hidden="true"><div class="traveler"><img class="feather" width="1200" height="800" alt=""></div></div>

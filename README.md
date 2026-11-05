@@ -1,11 +1,12 @@
 # Salumée — sito V4 (prototipo)
 
 Sito di Salumée, macelleria e paninoteca a Bellinzona e Claro.
-Questa versione corrisponde al sito completo approvato in anteprima locale.
+Ingresso diretto in Macelleria e switch fra i due reparti sempre visibile in alto.
 
-- `index.html`: ingresso con castello e scelta fra Macelleria e Paninoteca.
-- `macelleria.html`: prosciutti interattivi Il Gigante, Il Deciso, Il Rustico e Il Goloso.
+- `index.html`: ingresso diretto in Macelleria con Il Gigante, Il Deciso, Il Rustico e Il Goloso. Lo switch in alto a sinistra collega Macelleria e Paninoteca.
+- `macelleria.html`: stesso contenuto della landing, mantenuto per i collegamenti esistenti.
 - `paninoteca.html`: apertura della Mortadella allo scroll e menu.
+- Menu Macelleria: entrecôte, filetto, costine e salsicce; prosciutto crudo, mortadella, salame e speck. Disponibilità, quantità e prezzi si confermano su WhatsApp.
 - Ritiro su WhatsApp al +41 76 499 03 22: apre una bozza da completare e inviare.
 
 ## Anteprima locale

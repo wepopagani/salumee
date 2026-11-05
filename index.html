@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Salumée — Macelleria e Paninoteca · Bellinzona &amp; Claro</title>
-<meta name="description" content="Salumée a Bellinzona e Claro: macelleria e paninoteca. Scegli il tuo percorso.">
+<title>Salumée — Macelleria · Paninoteca · Bellinzona &amp; Claro</title>
+<meta name="description" content="La macelleria di Salumée: i prosciutti al banco, carni, salumi, grigliate e specialità da chiedere per il ritiro.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#191917">
 <link rel="icon" href="data:,">
-<link rel="preload" as="image" href="assets/img/mortadella-chiusa.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/img/prosciutti/prosciutto-2.webp" type="image/webp">
 <script>(function(d){d.classList.replace('no-js','js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('rm')}catch(e){}try{var t=+localStorage.getItem('salumee-ingresso');if(location.hash||(t&&Date.now()-t<432e5))d.classList.add('gate-seen')}catch(e){}})(document.documentElement);</script>
 <link rel="stylesheet" href="css/salumee.css">
 </head>
-<body class="page-index">
-<!-- Generato da tools/build.py a partire da src/ e data/. Modificare quei file, non questo. -->
+<body class="page-macelleria">
+<!-- Export statico: modificare HTML, CSS e JavaScript come indicato nel README. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-ne" viewBox="0 0 16 16"><path d="M3.5 12.5 12 4M5.2 3.6H12.4v7.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
   <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 1.5v12M3.2 8.8 8 13.6l4.8-4.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
@@ -28,26 +28,13 @@
 <header class="site-header">
   <nav class="site-nav" aria-label="Principale">
     <a class="brand" href="index.html"><img class="logo" src="assets/img/logo-salumee.webp" width="906" height="652" alt="Salumée Bellinzona, pagina iniziale"></a>
+    <div class="department-switch" role="group" aria-label="Scegli reparto"><a class="department-link" href="index.html" aria-current="page">Macelleria</a><a class="department-link" href="paninoteca.html">Paninoteca</a></div>
     <a class="nav-quick" href="#ordina">Ordina</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Apri la navigazione"><span class="nav-toggle-bars" aria-hidden="true"></span></button>
     <div class="nav-panel" id="nav-panel">
       <ul class="nav-list">
-        <li class="nav-item has-sub">
-          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="sub-macelleria">Macelleria <svg class="ico chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
-          <ul class="nav-sub" id="sub-macelleria">
-            <li><a href="macelleria.html#prosciutti">Prosciutti al banco</a></li>
-            <li><a href="macelleria.html#carni">Carni e specialità</a></li>
-            <li><a href="macelleria.html#grigliate">Grigliate</a></li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="sub-paninoteca">Paninoteca <svg class="ico chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
-          <ul class="nav-sub" id="sub-paninoteca">
-            <li><a href="paninoteca.html#focacce">Le focacce</a></li>
-            <li><a href="paninoteca.html#menu">Il menu</a></li>
-            <li><a href="paninoteca.html#ritiro">Ordina per il ritiro</a></li>
-          </ul>
-        </li>
+
+
         <li class="nav-item"><a class="nav-link" href="index.html#eventi">Eventi e novità</a></li>
         <li class="nav-item"><a class="nav-link" href="#sedi">Dove siamo</a></li>
       </ul>
@@ -57,97 +44,72 @@
 </header>
 
 <main id="main">
-  <!-- INGRESSO: castello, ante grafiche e due scelte equivalenti (disponibili da subito) -->
-  <section class="gate" id="top" aria-labelledby="gate-title">
-    <div class="gate-castle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 110 1600 410" class="castle-svg" role="img" aria-labelledby="castle-t">
-<title id="castle-t">Illustrazione provvisoria di Castelgrande a Bellinzona: Torre Nera, Torre Bianca, la cinta merlata e la Murata sulla roccia</title>
-<defs><radialGradient id="cg-glow" cx="52%" cy="52%" r="52%"><stop offset="0" stop-color="#e44932" stop-opacity=".15"/><stop offset=".5" stop-color="#662d37" stop-opacity=".07"/><stop offset="1" stop-color="#191917" stop-opacity="0"/></radialGradient><linearGradient id="cg-rock" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23221f"/><stop offset="1" stop-color="#191917"/></linearGradient><linearGradient id="cg-fade" x1="0" y1="0" x2="0" y2="1"><stop offset=".66" stop-color="#191917" stop-opacity="0"/><stop offset="1" stop-color="#191917"/></linearGradient></defs>
-<rect width="1600" height="700" fill="url(#cg-glow)"/>
-<path d="M0 470 L130 392 L250 430 L404 318 L540 386 L690 334 L836 392 L1004 282 L1168 366 L1318 318 L1462 362 L1600 342" fill="none" stroke="rgba(243,233,213,.24)" stroke-width="1.2"/>
-<path d="M0 520 L180 470 L380 494 L600 452 L820 486 L1060 438 L1300 474 L1600 444" fill="none" stroke="rgba(243,233,213,.24)" stroke-width="1" opacity=".7"/>
-<path d="M120 700 L196 640 L232 600 L262 586 L300 548 L322 530 L350 498 L372 470 L398 456 L436 452 L520 448 L612 452 L700 446 L790 450 L872 446 L960 448 L1048 444 L1130 450 L1196 454 L1232 470 L1262 498 L1300 540 L1336 572 L1374 616 L1420 652 L1470 700 Z" fill="url(#cg-rock)" stroke="rgba(243,233,213,.56)" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M398 456 L380 520 L392 560 L360 640 M560 450 L548 520 L566 578 L540 690 M820 448 L834 520 L812 600 L830 690 M1090 448 L1108 516 L1090 586 L1118 690 M1232 470 L1240 540 L1290 620" fill="none" stroke="rgba(243,233,213,.24)" stroke-width="1"/>
-<polygon points="398,440 350,466 300,506 246,552 196,594 150,628 104,656 58,680 58,706 104,682 150,654 196,620 246,578 300,532 350,492 398,466" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.2" stroke-linejoin="round"/><path d="M395.8 441.2V431.2H392.7L391.0 436.2L389.2 431.2H386.1V446.4M381.7 448.8V438.8H378.6L376.9 443.8L375.2 438.8H372.1V454.1M367.7 456.4V446.4H364.6L362.8 451.4L361.1 446.4H358.0V461.7M348.0 467.6V457.6H345.3L343.8 462.6L342.2 457.6H339.5V474.4M335.6 477.6V467.6H332.8L331.3 472.6L329.7 467.6H327.0V484.4M323.1 487.6V477.6H320.3L318.8 482.6L317.2 477.6H314.5V494.4M310.6 497.5V487.5H307.8L306.3 492.5L304.7 487.5H302.0V504.4M298.1 507.6V497.6H295.4L293.9 502.6L292.4 497.6H289.7V514.8M285.9 518.0V508.0H283.2L281.7 513.0L280.2 508.0H277.5V525.1M273.7 528.4V518.4H271.1L269.6 523.4L268.0 518.4H265.4V535.5M261.6 538.7V528.7H258.9L257.4 533.7L255.9 528.7H253.2V545.9M244.1 553.6V543.6H241.4L239.9 548.6L238.4 543.6H235.7V560.7M231.8 563.9V553.9H229.1L227.6 558.9L226.1 553.9H223.4V571.0M219.6 574.2V564.2H216.9L215.4 569.2L213.9 564.2H211.2V581.3M207.3 584.5V574.5H204.6L203.1 579.5L201.6 574.5H198.9V591.6M194.0 595.5V585.5H191.2L189.6 590.5L188.0 585.5H185.1V602.0M181.1 605.0V595.0H178.3L176.7 600.0L175.1 595.0H172.3V611.5M168.3 614.5V604.5H165.4L163.8 609.5L162.2 604.5H159.4V621.0M147.9 629.3V619.3H144.9L143.2 624.3L141.5 619.3H138.5V635.0M134.2 637.6V627.6H131.2L129.5 632.6L127.8 627.6H124.8V643.3M120.5 645.9V635.9H117.5L115.8 640.9L114.1 635.9H111.1V651.7M101.8 657.2V647.2H98.7L96.9 652.2L95.2 647.2H92.0V662.2M87.6 664.6V654.6H84.5L82.7 659.6L81.0 654.6H77.8V669.6M73.4 672.0V662.0H70.3L68.5 667.0L66.8 662.0H63.7V677.0" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/><polyline points="398,452 350,478 300,518 246,564 196,606 150,640 104,668 58,692" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/><polyline points="398,464 350,490 300,530 246,576 196,618 150,652 104,680 58,704" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/>
-<polygon points="398,420 520,414 612,418 612,452 520,448 398,454" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.2" stroke-linejoin="round"/><path d="M400.5 419.9V409.3H404.0L406.0 414.3L408.0 409.3H411.5V419.3M416.5 419.1V408.6H420.0L422.0 413.6L423.9 408.6H427.5V418.6M432.5 418.3V407.8H436.0L438.0 412.8L439.9 407.8H443.4V417.8M448.4 417.5V407.0H452.0L453.9 412.0L455.9 407.0H459.4V417.0M464.4 416.7V406.2H467.9L469.9 411.2L471.9 406.2H475.4V416.2M480.4 415.9V405.4H483.9L485.9 410.4L487.9 405.4H491.4V415.4M496.4 415.2V404.6H499.9L501.9 409.6L503.9 404.6H507.4V414.6M522.5 414.1V404.1H526.0L528.0 409.1L530.0 404.1H533.5V414.6M538.5 414.8V404.8H542.0L544.0 409.8L546.0 404.8H549.5V415.3M554.5 415.5V405.5H558.0L560.0 410.5L561.9 405.5H565.5V416.0M570.5 416.2V406.2H574.0L575.9 411.2L577.9 406.2H581.4V416.7M586.4 416.9V406.9H590.0L591.9 411.9L593.9 406.9H597.4V417.4" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/><polyline points="398,432 520,426 612,430" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/><polyline points="398,444 520,438 612,442" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/>
-<polygon points="612,412 790,408 872,410 872,448 790,446 612,450" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.2" stroke-linejoin="round"/><path d="M614.5 411.9V401.7H618.0L620.0 406.7L622.0 401.7H625.5V411.7M630.5 411.6V401.3H634.0L636.0 406.3L638.0 401.3H641.5V411.3M646.5 411.2V401.0H650.0L652.0 406.0L654.0 401.0H657.5V411.0M662.5 410.9V400.6H666.0L668.0 405.6L670.0 400.6H673.5V410.6M678.5 410.5V400.3H682.0L684.0 405.3L686.0 400.3H689.5V410.3M694.5 410.1V399.9H698.0L700.0 404.9L702.0 399.9H705.5V409.9M710.5 409.8V399.5H714.0L716.0 404.5L718.0 399.5H721.5V409.5M726.5 409.4V399.2H730.0L732.0 404.2L733.9 399.2H737.5V409.2M742.5 409.1V398.8H746.0L748.0 403.8L749.9 398.8H753.5V408.8M758.5 408.7V398.5H762.0L764.0 403.5L765.9 398.5H769.5V408.5M774.5 408.3V398.1H778.0L780.0 403.1L781.9 398.1H785.5V408.1M792.5 408.1V398.1H796.0L798.0 403.1L800.0 398.1H803.5V408.3M808.5 408.5V398.5H812.0L814.0 403.5L816.0 398.5H819.5V408.7M824.5 408.8V398.8H828.0L830.0 403.8L832.0 398.8H835.5V409.1M840.5 409.2V399.2H844.0L846.0 404.2L848.0 399.2H851.5V409.5M856.5 409.6V399.6H860.0L862.0 404.6L864.0 399.6H867.5V409.9" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/><polyline points="612,424 790,420 872,422" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/><polyline points="612,436 790,432 872,434" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/><polyline points="612,448 790,444 872,446" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/>
-<polygon points="1048,406 1130,412 1196,418 1232,432 1232,466 1196,452 1130,446 1048,440" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.2" stroke-linejoin="round"/><path d="M1050.5 406.2V396.2H1054.0L1056.0 401.2L1058.0 396.2H1061.5V407.0M1066.5 407.4V397.4H1070.0L1071.9 402.4L1073.9 397.4H1077.4V408.2M1082.4 408.5V398.5H1085.9L1087.9 403.5L1089.9 398.5H1093.4V409.3M1098.4 409.7V399.7H1101.9L1103.9 404.7L1105.8 399.7H1109.3V410.5M1114.3 410.9V400.9H1117.8L1119.8 405.9L1121.8 400.9H1125.3V411.7M1132.5 412.2V402.2H1136.0L1138.0 407.2L1139.9 402.2H1143.4V413.2M1148.4 413.7V403.7H1151.9L1153.9 408.7L1155.9 403.7H1159.4V414.7M1164.4 415.1V405.1H1167.9L1169.8 410.1L1171.8 405.1H1175.3V416.1M1180.3 416.6V406.6H1183.8L1185.8 411.6L1187.7 406.6H1191.2V417.6M1198.3 418.9V408.9H1201.6L1203.5 413.9L1205.3 408.9H1208.6V422.9M1213.2 424.7V414.7H1216.5L1218.4 419.7L1220.2 414.7H1223.5V428.7" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/><polyline points="1048,418 1130,424 1196,430 1232,444" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/><polyline points="1048,430 1130,436 1196,442 1232,456" fill="none" stroke="rgba(243,233,213,.24)" stroke-width=".8"/>
-<rect x="430" y="374" width="146" height="40" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.1"/>
-<path d="M432.5 374.0V364.0H436.0L438.0 369.0L440.0 364.0H443.5V374.0M448.5 374.0V364.0H452.0L454.0 369.0L456.0 364.0H459.5V374.0M464.5 374.0V364.0H468.0L470.0 369.0L472.0 364.0H475.5V374.0M480.5 374.0V364.0H484.0L486.0 369.0L488.0 364.0H491.5V374.0M496.5 374.0V364.0H500.0L502.0 369.0L504.0 364.0H507.5V374.0M512.5 374.0V364.0H516.0L518.0 369.0L520.0 364.0H523.5V374.0M528.5 374.0V364.0H532.0L534.0 369.0L536.0 364.0H539.5V374.0M544.5 374.0V364.0H548.0L550.0 369.0L552.0 364.0H555.5V374.0M560.5 374.0V364.0H564.0L566.0 369.0L568.0 364.0H571.5V374.0" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/>
-<rect x="640" y="176" width="86" height="236" fill="#151413" stroke="rgba(243,233,213,.56)" stroke-width="1.3"/><path d="M643.0 176.0V163.0H647.5L650.0 169.0L652.5 163.0H657.0V176.0M663.0 176.0V163.0H667.5L670.0 169.0L672.5 163.0H677.0V176.0M683.0 176.0V163.0H687.5L690.0 169.0L692.5 163.0H697.0V176.0M703.0 176.0V163.0H707.5L710.0 169.0L712.5 163.0H717.0V176.0" fill="#151413" stroke="rgba(243,233,213,.56)" stroke-width="1.1"/><line x1="720" y1="180" x2="720" y2="412" stroke="rgba(243,233,213,.24)" stroke-width="1"/><line x1="640" y1="198" x2="726" y2="198" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="220" x2="726" y2="220" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="242" x2="726" y2="242" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="264" x2="726" y2="264" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="286" x2="726" y2="286" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="308" x2="726" y2="308" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="330" x2="726" y2="330" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="352" x2="726" y2="352" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="374" x2="726" y2="374" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="640" y1="396" x2="726" y2="396" stroke="rgba(243,233,213,.24)" stroke-width=".7"/>
-<rect x="872" y="350" width="176" height="96" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1.1"/>
-<path d="M874.5 350.0V340.0H878.0L880.0 345.0L882.0 340.0H885.5V350.0M890.5 350.0V340.0H894.0L896.0 345.0L898.0 340.0H901.5V350.0M906.5 350.0V340.0H910.0L912.0 345.0L914.0 340.0H917.5V350.0M922.5 350.0V340.0H926.0L928.0 345.0L930.0 340.0H933.5V350.0M938.5 350.0V340.0H942.0L944.0 345.0L946.0 340.0H949.5V350.0M954.5 350.0V340.0H958.0L960.0 345.0L962.0 340.0H965.5V350.0M970.5 350.0V340.0H974.0L976.0 345.0L978.0 340.0H981.5V350.0M986.5 350.0V340.0H990.0L992.0 345.0L994.0 340.0H997.5V350.0M1002.5 350.0V340.0H1006.0L1008.0 345.0L1010.0 340.0H1013.5V350.0M1018.5 350.0V340.0H1022.0L1024.0 345.0L1026.0 340.0H1029.5V350.0M1034.5 350.0V340.0H1038.0L1040.0 345.0L1042.0 340.0H1045.5V350.0" fill="#1d1c1a" stroke="rgba(243,233,213,.56)" stroke-width="1"/>
-<rect x="934" y="150" width="54" height="200" fill="#2c2a26" stroke="rgba(243,233,213,.6)" stroke-width="1.3"/><path d="M936.5 150.0V137.0H940.3L942.5 143.0L944.7 137.0H948.5V150.0M953.5 150.0V137.0H957.3L959.5 143.0L961.7 137.0H965.5V150.0M970.5 150.0V137.0H974.3L976.5 143.0L978.7 137.0H982.5V150.0" fill="#2c2a26" stroke="rgba(243,233,213,.6)" stroke-width="1.1"/><line x1="982" y1="154" x2="982" y2="350" stroke="rgba(243,233,213,.24)" stroke-width="1"/><line x1="934" y1="172" x2="988" y2="172" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="194" x2="988" y2="194" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="216" x2="988" y2="216" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="238" x2="988" y2="238" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="260" x2="988" y2="260" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="282" x2="988" y2="282" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="304" x2="988" y2="304" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="326" x2="988" y2="326" stroke="rgba(243,233,213,.24)" stroke-width=".7"/><line x1="934" y1="348" x2="988" y2="348" stroke="rgba(243,233,213,.24)" stroke-width=".7"/>
-<rect width="1600" height="700" fill="url(#cg-fade)"/>
-</svg>
-
+  <!-- MACELLERIA: apertura -->
+  <section class="mac-hero mac-hero-v5" id="top" aria-labelledby="mac-title">
+    <div class="mac-hero-copy">
+      <p class="eyebrow">Salumée · Macelleria · Bellinzona &amp; Claro</p>
+      <h1 class="display mac-title" id="mac-title"><span class="l">Il banco</span><span class="l">ha</span><span class="l l-red">carattere.</span></h1>
+      <p class="mac-lead">Carni, salumi e specialità.<br>Quattro caratteri da conoscere. Un banco da scoprire.</p>
+      <div class="mac-actions"><a class="btn btn-cream" href="#carni">Scopri il menu <span aria-hidden="true">↗</span></a><a class="link-under btn-wa" data-pickup="macelleria" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotti%20richiesti%3A%20...%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener"><svg class="ico ico-wa" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Ordina per il ritiro<span class="sr-only"> su WhatsApp (si apre in una nuova scheda)</span></a></div>
     </div>
-    <div class="gate-inner">
-      <p class="eyebrow gate-eyebrow"><span class="nowrap">Salumée ·</span> <span class="nowrap">Bellinzona &amp; Claro</span></p>
-      <h1 class="display gate-title" id="gate-title"><span class="l">Due modi di scegliere</span> <span class="l l-red">il gusto.</span></h1>
-      <p class="gate-sub">Macelleria e paninoteca, a Bellinzona e Claro.</p>
-      <ul class="choices">
-        <li>
-          <a class="choice" href="macelleria.html">
-            <span class="choice-media"><img src="assets/img/banco-prosciutti.webp" width="936" height="233" alt="" decoding="async"></span>
-            <span class="choice-body">
-              <span class="choice-no" aria-hidden="true">01</span>
-              <span class="choice-name">Macelleria</span>
-              <span class="choice-claim">Carni, salumi e voglia di griglia.</span>
-              <span class="choice-cta" aria-hidden="true">Entra <svg class="ico"><use href="#i-right"/></svg></span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a class="choice" href="paninoteca.html">
-            <span class="choice-media"><img src="assets/img/mortadella-chiusa.webp" width="1200" height="800" alt="" decoding="async"></span>
-            <span class="choice-body">
-              <span class="choice-no" aria-hidden="true">02</span>
-              <span class="choice-name">Paninoteca</span>
-              <span class="choice-claim">Scegli il tuo prossimo morso.</span>
-              <span class="choice-cta" aria-hidden="true">Entra <svg class="ico"><use href="#i-right"/></svg></span>
-            </span>
-          </a>
-        </li>
-      </ul>
-      <p class="gate-note">Illustrazione ispirata a Castelgrande, simbolo di Bellinzona. La bottega non si trova nel castello.</p>
-    </div>
-    <div class="gate-doors" aria-hidden="true">
-      <div class="door door-l"><span class="door-panel"></span><span class="door-panel"></span></div>
-      <div class="door door-r"><span class="door-panel"></span><span class="door-panel"></span></div>
-    </div>
-    <button class="gate-skip" type="button">Salta l’ingresso</button>
-  </section>
-
-  <!-- LA BOTTEGA: le due anime, con l’insegna reale -->
-  <section class="section bottega" id="bottega" aria-labelledby="bottega-title">
-    <div class="bottega-grid">
-      <figure class="insegna">
-        <img src="assets/img/insegna-bellinzona.webp" width="936" height="620" loading="lazy" decoding="async" alt="L’insegna bordeaux di Salumée: Macelleria · Paninoteca, Bellinzona">
-        <figcaption>L’insegna di Bellinzona.</figcaption>
-      </figure>
-      <div class="bottega-copy">
-        <p class="kicker">La bottega</p>
-        <h2 class="display bottega-title" id="bottega-title"><span class="l">Prima il banco.</span> <span class="l l-accent">Poi il morso.</span></h2>
-        <p class="bottega-text">Macelleria e paninoteca, insieme. Carni, salumi e focacce: due modi di scoprire Salumée, a Bellinzona e a Claro.</p>
-        <ul class="ways">
-          <li><span class="no" aria-hidden="true">01</span><a class="name" href="macelleria.html">Macelleria</a><span class="desc">I prosciutti al banco, carni, salumi e grigliate da chiedere per il ritiro.</span></li>
-          <li><span class="no" aria-hidden="true">02</span><a class="name" href="paninoteca.html">Paninoteca</a><span class="desc">Focacce farcite, anche con pane al carbone, e il menu completo.</span></li>
-        </ul>
-        <div class="real-strip">
-          <p class="kicker">Dal menu di Salumée</p>
-          <ul>
-            <li><img src="assets/img/menu-foto-1.webp" width="406" height="188" loading="lazy" decoding="async" alt="Focaccia al carbone farcita, foto pubblicata nel menu di Salumée"></li>
-            <li><img src="assets/img/menu-foto-2.webp" width="406" height="235" loading="lazy" decoding="async" alt="Focaccia farcita con salume e rucola, tenuta con un guanto, foto del menu"></li>
-            <li><img src="assets/img/menu-foto-3.webp" width="406" height="248" loading="lazy" decoding="async" alt="Panino farcito con salume su un banco, foto del menu"></li>
-          </ul>
+    <div class="mac-showcase" id="prosciutti" role="group" aria-label="Scopri i quattro prosciutti">
+      <p class="mac-showcase-hint">Quattro caratteri. Tocca il tuo.</p>
+      <div class="hams" data-hams>
+      <div class="hams-stage">
+        <div class="hams-row" role="group" aria-label="Quattro prosciutti">
+          <button class="ham-piece" type="button" data-i="0" style="--w:500;--d:0" aria-pressed="false" aria-controls="ham-detail" aria-label="Il Gigante: forma ampia e arrotondata"><span class="ham-lift"><span class="ham-shadow" aria-hidden="true"></span><img src="assets/img/prosciutti/prosciutto-1.webp" width="500" height="887" alt="" loading="eager" decoding="async"></span></button><button class="ham-piece" type="button" data-i="1" style="--w:400;--d:1" aria-pressed="false" aria-controls="ham-detail" aria-label="Il Deciso: forma lunga e affusolata"><span class="ham-lift"><span class="ham-shadow" aria-hidden="true"></span><img src="assets/img/prosciutti/prosciutto-2.webp" width="400" height="887" alt="" loading="eager" decoding="async"></span></button><button class="ham-piece" type="button" data-i="2" style="--w:400;--d:2" aria-pressed="false" aria-controls="ham-detail" aria-label="Il Rustico: forma compatta"><span class="ham-lift"><span class="ham-shadow" aria-hidden="true"></span><img src="assets/img/prosciutti/prosciutto-3.webp" width="400" height="887" alt="" loading="eager" decoding="async"></span></button><button class="ham-piece" type="button" data-i="3" style="--w:474;--d:3" aria-pressed="false" aria-controls="ham-detail" aria-label="Il Goloso: pezzo già aperto"><span class="ham-lift"><span class="ham-shadow" aria-hidden="true"></span><img src="assets/img/prosciutti/prosciutto-4.webp" width="474" height="887" alt="" loading="eager" decoding="async"></span></button>
         </div>
       </div>
+      <div class="ham-detail" id="ham-detail" aria-live="polite">
+        <span class="ham-lens" aria-hidden="true"></span>
+        <p class="ham-no"><span class="ham-which">Il Gigante</span> <span class="ham-of"></span></p>
+        <p class="ham-form"></p>
+        <p class="ham-text"></p>
+        <p class="ham-ask">Varietà, stagionatura e provenienza: chiedi al banco.</p>
+      </div>
+      <div class="hams-controls">
+        <button class="ham-step" type="button" data-step="-1" aria-label="Prosciutto precedente"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+        <div class="ham-thumbs" role="group" aria-label="Scegli un prosciutto">
+          <button class="ham-thumb" type="button" data-i="0" aria-pressed="false" aria-label="Il Gigante" title="Il Gigante"><img src="assets/img/prosciutti/prosciutto-1.webp" width="500" height="887" alt="" loading="eager" decoding="async"><span class="ham-thumb-name">Il Gigante</span></button><button class="ham-thumb" type="button" data-i="1" aria-pressed="false" aria-label="Il Deciso" title="Il Deciso"><img src="assets/img/prosciutti/prosciutto-2.webp" width="400" height="887" alt="" loading="eager" decoding="async"><span class="ham-thumb-name">Il Deciso</span></button><button class="ham-thumb" type="button" data-i="2" aria-pressed="false" aria-label="Il Rustico" title="Il Rustico"><img src="assets/img/prosciutti/prosciutto-3.webp" width="400" height="887" alt="" loading="eager" decoding="async"><span class="ham-thumb-name">Il Rustico</span></button><button class="ham-thumb" type="button" data-i="3" aria-pressed="false" aria-label="Il Goloso" title="Il Goloso"><img src="assets/img/prosciutti/prosciutto-4.webp" width="474" height="887" alt="" loading="eager" decoding="async"><span class="ham-thumb-name">Il Goloso</span></button>
+        </div>
+        <button class="ham-step" type="button" data-step="1" aria-label="Prosciutto successivo"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+        <button class="link-btn ham-all" type="button" disabled>Guarda tutti</button>
+      </div>
+      <div class="hams-foot">
+        <p class="ham-note">Immagini illustrative. Selezione da confermare.</p>
+
+      </div>
+      <script type="application/json" id="ham-data">[{"n": 1, "nome": "Il Gigante", "file": "assets/img/prosciutti/prosciutto-1.webp", "w": 500, "h": 887, "forma": "Forma ampia e arrotondata", "testo": "Cotenna dorata chiara, gambo corto legato con lo spago.", "dx": 250, "dy": 560}, {"n": 2, "nome": "Il Deciso", "file": "assets/img/prosciutti/prosciutto-2.webp", "w": 400, "h": 887, "forma": "Forma lunga e affusolata", "testo": "Cotenna bruno scuro, zampa intera.", "dx": 175, "dy": 540}, {"n": 3, "nome": "Il Rustico", "file": "assets/img/prosciutti/prosciutto-3.webp", "w": 400, "h": 887, "forma": "Forma compatta", "testo": "Colore ambrato intenso, legato con lo spago.", "dx": 205, "dy": 560}, {"n": 4, "nome": "Il Goloso", "file": "assets/img/prosciutti/prosciutto-4.webp", "w": 474, "h": 887, "forma": "Pezzo già aperto", "testo": "Taglio rosato, grasso bianco, cotenna dorata.", "dx": 250, "dy": 700}]</script>
+    </div>
     </div>
   </section>
 
-  <!-- EVENTI E NOVITÀ: dati in data/eventi.json -->
-  <section class="section eventi" id="eventi" aria-labelledby="eventi-title">
+  <!-- PROSCIUTTI AL BANCO: quattro pezzi illustrativi (data/macelleria.json → prosciutti_concept), nessun dato commerciale -->
+
+
+  <!-- MENU MACELLERIA: carni da grigliare e salumi al taglio -->
+  <section class="section butcher-menu" id="carni" aria-labelledby="butcher-menu-title">
+    <div class="butcher-menu-head">
+      <div><p class="kicker">Il menu della Macelleria</p><h2 class="display" id="butcher-menu-title">Dal banco.<br><span>Alla brace.</span></h2></div>
+      <p class="butcher-menu-intro">La tua grigliata comincia qui.<br>Scegli cosa ti va: per quantità, prezzi e disponibilità ci sentiamo su WhatsApp.</p>
+    </div>
+    <div class="butcher-tabs" role="tablist" aria-label="Scegli il menu Macelleria">
+      <button id="tab-griglia" type="button" role="tab" aria-selected="true" aria-controls="grigliate" tabindex="0">Carni da grigliare <span aria-hidden="true">04</span></button>
+      <button id="tab-salumi" type="button" role="tab" aria-selected="false" aria-controls="salumi" tabindex="-1">Salumi al taglio <span aria-hidden="true">04</span></button>
+    </div>
+    <div class="butcher-panel" id="grigliate" role="tabpanel" aria-labelledby="tab-griglia" tabindex="0"><div class="butcher-items"><article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">01</span><div class="butcher-item-copy"><p class="butcher-item-tag">Manzo</p><h3>Entrecôte</h3><p class="butcher-item-description">Un taglio di carattere, protagonista della griglia.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Entrec%C3%B4te.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Entrecôte per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">02</span><div class="butcher-item-copy"><p class="butcher-item-tag">Manzo</p><h3>Filetto</h3><p class="butcher-item-description">Tenerezza e gusto, per le occasioni da ricordare.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Filetto.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Filetto per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">03</span><div class="butcher-item-copy"><p class="butcher-item-tag">Per la griglia</p><h3>Costine</h3><p class="butcher-item-description">Da condividere, una dopo l’altra.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Costine.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Costine per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">04</span><div class="butcher-item-copy"><p class="butcher-item-tag">Per la griglia</p><h3>Salsicce</h3><p class="butcher-item-description">Le immancabili di una grigliata in compagnia.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Salsicce.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Salsicce per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article></div></div>
+    <div class="butcher-panel" id="salumi" role="tabpanel" aria-labelledby="tab-salumi" tabindex="0" hidden><div class="butcher-items"><article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">01</span><div class="butcher-item-copy"><p class="butcher-item-tag">Al taglio</p><h3>Prosciutto crudo</h3><p class="butcher-item-description">Per il tagliere, l’aperitivo o il tuo prossimo panino.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Prosciutto%20crudo.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Prosciutto crudo per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">02</span><div class="butcher-item-copy"><p class="butcher-item-tag">Al taglio</p><h3>Mortadella</h3><p class="butcher-item-description">Tutto il gusto che conosci, anche fuori dalla focaccia.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Mortadella.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Mortadella per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">03</span><div class="butcher-item-copy"><p class="butcher-item-tag">Per il tagliere</p><h3>Salame</h3><p class="butcher-item-description">Da portare in tavola e gustare in compagnia.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Salame.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Salame per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article>
+<article class="butcher-item"><span class="butcher-item-no" aria-hidden="true">04</span><div class="butcher-item-copy"><p class="butcher-item-tag">Al taglio</p><h3>Speck</h3><p class="butcher-item-description">Il carattere affumicato che dà gusto al tagliere.</p></div><a class="butcher-item-pick" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotto%3A%20Speck.%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%2C%20prezzo%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener" aria-label="Chiedi Speck per il ritiro su WhatsApp"><span aria-hidden="true">↗</span></a></article></div></div>
+    <div class="butcher-menu-foot"><p>Hai in mente una grigliata? Dicci per quante persone: scegliamo insieme cosa mettere sul fuoco.</p><a class="btn btn-dark" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20preparare%20una%20grigliata%20per%20...%20persone.%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AGiorno%20e%20orario%3A%20...%0AMi%20consigliate%20una%20selezione%20e%20mi%20confermate%20disponibilit%C3%A0%20e%20prezzo%3F%20Grazie%21" target="_blank" rel="noopener">Prepariamo la tua grigliata <span aria-hidden="true">↗</span></a></div>
+  </section>
+
+<!-- ORDINA: ritiro (WhatsApp) accanto alla consegna (Uber Eats), su ogni pagina -->
+<section class="section eventi" id="eventi" aria-labelledby="eventi-title">
     <div class="eventi-head">
       <p class="kicker">Eventi e novità</p>
       <h2 class="display eventi-title" id="eventi-title"><span class="l">Al banco succede</span> <span class="l l-red">sempre qualcosa.</span></h2>
@@ -158,15 +120,14 @@
     </div>
   </section>
 
-<!-- ORDINA: ritiro (WhatsApp) accanto alla consegna (Uber Eats), su ogni pagina -->
-<section class="section ordina" id="ordina" aria-labelledby="ordina-title">
+  <section class="section ordina" id="ordina" aria-labelledby="ordina-title">
   <div class="ordina-grid">
     <div>
       <p class="kicker">Ordina</p>
       <h2 class="display ordina-title" id="ordina-title"><span class="l">Passi tu</span> <span class="l l-cream">o arriva da te.</span></h2>
     </div>
     <div class="ordina-actions">
-      <a class="btn btn-dark btn-wa" data-pickup="general" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AProdotti%20richiesti%3A%20...%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener"><svg class="ico ico-wa" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Ordina per il ritiro<span class="sr-only"> su WhatsApp (si apre in una nuova scheda)</span></a>
+      <a class="btn btn-dark btn-wa" data-pickup="macelleria" href="https://wa.me/41764990322?text=Ciao%20Salum%C3%A9e%21%20Vorrei%20ordinare%20per%20il%20ritiro.%0AReparto%3A%20macelleria.%0AProdotti%20richiesti%3A%20...%0AQuantit%C3%A0%3A%20...%0ASede%20di%20ritiro%20%28Bellinzona%20o%20Claro%29%3A%20...%0AOrario%20desiderato%3A%20...%0AMi%20confermate%20disponibilit%C3%A0%20e%20orario%3F%20Grazie%21" target="_blank" rel="noopener"><svg class="ico ico-wa" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>Ordina per il ritiro<span class="sr-only"> su WhatsApp (si apre in una nuova scheda)</span></a>
       <a class="btn btn-on-red" href="https://www.ubereats.com/ch-it/store/salumee-bellinzona/Ci61v_wyVIKlLuKxRmpIug" target="_blank" rel="noopener">Ordina a domicilio <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ne"/></svg><span class="sr-only"> su Uber Eats (si apre in una nuova scheda)</span></a>
       <p class="ordina-note">Il ritiro apre una bozza di messaggio su WhatsApp<span class="pickup-what" data-pickup-label></span>: la controlli e la invii tu. Il negozio ti conferma disponibilità, sede e orario. Nessun pagamento online.</p>
     </div>
@@ -198,11 +159,11 @@
   <img class="footer-logo" src="assets/img/logo-salumee.webp" width="906" height="652" loading="lazy" decoding="async" alt="Salumée Bellinzona">
   <div class="footer-meta">
     <p>Macelleria · Paninoteca · Bellinzona &amp; Claro</p>
-    <p><a href="https://www.instagram.com/salumee.bellinzona/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (si apre in una nuova scheda)</span></a> · <a href="index.html">Pagina iniziale</a> · <a href="macelleria.html">Macelleria</a> · <a href="paninoteca.html">Paninoteca</a></p>
-    <p>Proposta di design, non pubblicata. Focacce: immagini illustrative (AI). Castello: illustrazione provvisoria ispirata a Castelgrande. Logo, insegna, banco e foto del menu: riferimenti dai canali Salumée.</p>
+    <p><a href="https://www.instagram.com/salumee.bellinzona/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (si apre in una nuova scheda)</span></a> · <a href="index.html">Pagina iniziale</a> · <a href="index.html">Macelleria</a> · <a href="paninoteca.html">Paninoteca</a></p>
+    <p>Proposta di design, non pubblicata. Focacce: immagini illustrative (AI). Logo, insegna, banco e foto del menu: riferimenti dai canali Salumée.</p>
   </div>
 </footer>
 <script src="js/common.js"></script>
-<script src="js/home.js"></script>
+<script src="js/macelleria.js"></script>
 </body>
 </html>

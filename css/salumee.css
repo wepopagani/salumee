@@ -656,3 +656,124 @@ body.dialog-open{overflow:hidden}
 .js:not(.rm) .gate-photo{animation:gate-photo 1.8s var(--ease-out) both}
 @keyframes gate-photo{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
 .gate.is-skip .gate-photo{animation-duration:.01ms!important;animation-delay:0s!important}
+
+/* Reparti: ingresso diretto in Macelleria e selettore sempre visibile. */
+.site-nav>.brand{margin-right:8px;flex:none}
+.department-switch{display:inline-flex;align-items:center;gap:2px;flex:none;margin-right:auto;padding:4px;border:1px solid rgba(243,233,213,.3);border-radius:999px}
+.department-link{display:flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:999px;color:var(--crema);font-family:var(--f-display);font-size:20px;line-height:1;text-transform:uppercase;text-decoration:none;opacity:.65;transition:background-color .25s,color .25s,opacity .25s}
+.department-link:hover,.department-link:focus-visible{opacity:1}
+.department-link[aria-current="page"]{background:var(--crema);color:var(--carbone);opacity:1}
+
+/* Macelleria: stessa composizione di apertura della Paninoteca. */
+.mac-hero-v5{grid-template-columns:minmax(0,.85fr) minmax(0,1.2fr);min-height:min(740px,calc(100svh - var(--hh)));padding:clamp(24px,4svh,54px) var(--gutter);gap:clamp(28px,4vw,70px);align-items:center;background:var(--carbone)}
+.mac-hero-v5 .eyebrow{color:var(--crema)}
+.mac-hero-v5 .mac-title{font-size:clamp(62px,min(7.5vw,11svh),130px);line-height:.95;letter-spacing:-.015em;margin-top:16px}
+.mac-hero-v5 .mac-title .l-red{color:var(--rosso)}
+.mac-hero-v5 .mac-lead{font-size:clamp(15px,1.35vw,21px);line-height:1.45;margin-top:24px;color:var(--muted-carbone)}
+.mac-hero-v5 .mac-actions{gap:16px 24px;margin-top:28px}
+.mac-hero-v5 .mac-actions .btn-wa .ico{width:17px;height:17px;margin-right:4px;vertical-align:middle}
+.mac-hero-v5 .mac-showcase{min-width:0;scroll-margin-top:calc(var(--hh) + 18px)}
+.mac-showcase-hint{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--muted-carbone);text-align:center;margin-bottom:6px}
+.mac-hero-v5 .hams{--stage-h:clamp(260px,28vw,410px);margin-top:0}
+.mac-hero-v5 .hams-stage{--gap:clamp(5px,.8vw,14px);overflow-clip-margin:12px}
+.mac-hero-v5 .ham-piece{height:min(94cqh,calc((100cqw - var(--gap) * 3 - 8px) / 2))}
+.mac-hero-v5 .ham-detail{width:39%;grid-template-columns:1fr;grid-template-areas:"no" "form" "text";padding:14px 0 14px 18px;gap:7px}
+.mac-hero-v5 .ham-lens,.mac-hero-v5 .ham-ask{display:none}
+.mac-hero-v5 .ham-no{font-size:clamp(25px,2.35vw,38px)}
+.mac-hero-v5 .ham-form{font-size:13px}
+.mac-hero-v5 .ham-text{font-size:13px;margin-top:4px;line-height:1.45}
+.mac-hero-v5 .hams-controls{gap:8px 10px;margin-top:14px}
+.mac-hero-v5 .ham-thumb{height:76px;width:58px;flex-direction:column;gap:3px;padding:4px 2px}
+.mac-hero-v5 .ham-thumb img{height:47px}
+.ham-thumb-name{font-size:9px;line-height:1.3;white-space:nowrap;font-weight:700;color:var(--crema)}
+.mac-hero-v5 .ham-step{height:42px;width:42px}
+.mac-hero-v5 .ham-all{font-size:12px;margin-left:0}
+.mac-hero-v5 .hams-foot{justify-content:center;margin-top:14px;padding-top:12px}
+.mac-hero-v5 .ham-note{font-size:11px;text-align:center}
+
+/* Menu del banco: due selezioni, richieste reali su WhatsApp. */
+.butcher-menu{background:var(--crema);color:var(--carbone);padding-block:clamp(54px,7vw,104px)}
+.butcher-menu :focus-visible{outline-color:var(--rosso-ink)}
+.butcher-menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.butcher-menu .kicker{color:var(--rosso-ink)}
+.butcher-menu h2{font-size:clamp(56px,6.8vw,112px);line-height:.98;margin-top:18px}
+.butcher-menu h2 span{color:var(--rosso-ink)}
+.butcher-menu-intro{font-size:clamp(16px,1.3vw,20px);font-weight:600;line-height:1.6;max-width:24em;padding-bottom:5px}
+.butcher-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;padding-bottom:22px;border-bottom:2px solid var(--carbone)}
+.butcher-tabs button{display:inline-flex;align-items:center;gap:25px;min-height:50px;padding:0 20px;background:none;border:1px solid rgba(25,25,23,.35);border-radius:999px;font-family:var(--f-display);font-size:23px;cursor:pointer}
+.butcher-tabs button span{font-family:var(--f-text);font-size:11px;font-weight:800;opacity:.6}
+.butcher-tabs button[aria-selected="true"]{background:var(--carbone);color:var(--crema);border-color:var(--carbone)}
+.butcher-tabs button:hover{border-color:var(--rosso-ink)}
+.butcher-panel{scroll-margin-top:calc(var(--hh) + 24px)}
+.butcher-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(28px,5vw,80px)}
+.butcher-item{display:grid;grid-template-columns:22px minmax(0,1fr) 46px;gap:14px;align-items:start;min-width:0;padding:28px 0;border-bottom:1px solid rgba(25,25,23,.24)}
+.butcher-item-no{font-size:11px;font-weight:800;color:var(--rosso-ink);padding-top:4px}
+.butcher-item-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted-crema)}
+.butcher-item h3{font-family:var(--f-display);font-size:clamp(29px,2.8vw,44px);text-transform:uppercase;line-height:1.1;font-weight:400;margin-top:8px}
+.butcher-item-description{font-size:14px;line-height:1.55;color:var(--muted-crema);margin-top:9px;max-width:30em}
+.butcher-item-pick{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(25,25,23,.4);border-radius:50%;font-size:25px;text-decoration:none;margin-top:20px;transition:background-color .2s,color .2s}
+.butcher-item-pick:hover{background:var(--carbone);color:var(--crema)}
+.butcher-menu-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:32px}
+.butcher-menu-foot p{max-width:37em;font-size:14px;font-weight:600;line-height:1.6}
+.butcher-menu-foot .btn{flex:none;font-size:20px;gap:14px}
+.no-js .butcher-tabs{display:none}
+.no-js .butcher-panel[hidden]{display:block!important}
+
+@media(min-width:760px) and (max-width:1099px){
+  .mac-hero-v5{gap:26px;grid-template-columns:minmax(0,.8fr) minmax(0,1.15fr)}
+  .mac-hero-v5 .ham-all{flex-basis:100%;min-height:28px}
+}
+@media(max-width:899.98px){
+  .site-nav{gap:8px}
+  .site-nav>.brand{margin-right:2px}
+  .js .site-nav>.nav-quick{display:none}
+  .department-switch{padding:3px;gap:0}
+  .department-link{font-size:18px;min-height:38px;padding:0 12px}
+  .mac-hero-v5{grid-template-columns:1fr;min-height:0;gap:0;padding-top:26px;padding-bottom:28px}
+  .mac-hero-v5 .mac-hero-copy{display:contents}
+  .mac-hero-v5 .mac-hero-copy>.eyebrow{order:0}
+  .mac-hero-v5 .mac-title{order:1;font-size:clamp(52px,10vw,90px);margin-top:10px}
+  .mac-hero-v5 .mac-lead{order:2;font-size:16px;margin-top:16px}
+  .mac-hero-v5 .mac-showcase{order:3;margin-top:24px}
+  .mac-hero-v5 .mac-actions{order:4;margin-top:20px}
+  .mac-hero-v5 .hams{--stage-h:clamp(240px,42vw,340px)}
+  .butcher-menu-head{align-items:flex-start;flex-direction:column;gap:24px}
+  .butcher-menu-intro{max-width:34em}
+  .butcher-menu-foot{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:759.98px){
+  .mac-hero-v5 .hams{--stage-h:clamp(210px,59vw,310px)}
+  .mac-hero-v5 .hams-stage{--gap:-12px}
+  .mac-hero-v5 .ham-detail{width:auto;grid-template-columns:1fr;grid-template-areas:"no" "form" "text";min-height:0;padding:14px 0 10px 16px;margin-top:16px}
+  .mac-hero-v5 .hams:not(.is-focus) .ham-detail{display:none}
+  .mac-hero-v5 .ham-text{font-size:13px}
+  .mac-hero-v5 .hams-controls{gap:7px;margin-top:12px}
+  .mac-hero-v5 .ham-thumb{width:49px;height:72px}
+  .mac-hero-v5 .ham-thumb img{height:44px}
+  .mac-hero-v5 .ham-step{width:36px;height:40px;min-width:36px}
+  .mac-hero-v5 .ham-all{flex-basis:100%;min-height:30px}
+  .butcher-items{grid-template-columns:1fr}
+  .butcher-tabs button{font-size:20px;gap:16px;padding-inline:16px}
+}
+@media(max-width:479.98px){
+  .site-nav{gap:5px}
+  .site-nav .logo{height:43px}
+  .department-link{font-size:16px;min-height:36px;padding:0 9px}
+  .js .site-nav>.nav-toggle{width:34px;min-width:34px;margin-right:-5px}
+  .mac-hero-v5 .mac-title{font-size:clamp(48px,13.4vw,64px)}
+  .mac-hero-v5 .eyebrow{font-size:10px;letter-spacing:.12em}
+  .mac-hero-v5 .mac-showcase{margin-top:20px}
+  .mac-showcase-hint{font-size:10px}
+  .mac-hero-v5 .mac-lead{font-size:14px}
+  .mac-hero-v5 .mac-actions{gap:12px 20px}
+  .mac-hero-v5 .mac-actions .btn{padding-inline:18px;font-size:19px}
+  .mac-hero-v5 .mac-actions .link-under{font-size:13px}
+  .butcher-menu h2{font-size:58px}
+}
+@media(max-width:359.98px){
+  .site-nav .logo{height:37px}
+  .department-link{font-size:14px;padding-inline:8px}
+  .mac-hero-v5 .ham-thumb{width:43px}
+  .mac-hero-v5 .hams-controls{gap:5px}
+  .ham-thumb-name{font-size:8px}
+}

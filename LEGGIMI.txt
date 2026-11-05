@@ -1,6 +1,6 @@
 Salumée — sito completo (prototipo V4, non pubblicato, noindex)
 
-Contenuto: index.html (ingresso), macelleria.html, paninoteca.html, css/, js/,
+Contenuto: index.html (Macelleria), macelleria.html, paninoteca.html, css/, js/,
 assets/fonts, assets/img (incluse le immagini dei prosciutti: Il Gigante, Il Deciso,
 Il Rustico, Il Goloso), assets/seq/mortadella (fotogrammi della focaccia).
 
@@ -9,4 +9,6 @@ Per aprirlo serve un piccolo server locale (i fotogrammi si caricano via HTTP):
   python3 -m http.server 8000
 poi aprire http://localhost:8000
 
-Immagini delle focacce, dei prosciutti e del castello: illustrative.
+Ingresso diretto nella Macelleria. Switch Macelleria / Paninoteca in alto a sinistra.
+Menu carni da grigliare e salumi al taglio con richiesta di ritiro su WhatsApp.
+Immagini delle focacce e dei prosciutti: illustrative.

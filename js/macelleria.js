@@ -99,3 +99,39 @@
   } else root.classList.add('is-in');
   window.__salumeeHams = () => ({ cur, focus: root.classList.contains('is-focus') });
 })();
+
+/* Menu Macelleria: carni e salumi, con navigazione anche da tastiera. */
+(() => {
+  'use strict';
+  const menu = document.querySelector('.butcher-menu');
+  if (!menu) return;
+  const tabs = [...menu.querySelectorAll('[role="tab"]')];
+  const panels = [...menu.querySelectorAll('[role="tabpanel"]')];
+  const select = (index, focus = false) => {
+    tabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      panels[i].hidden = i !== index;
+    });
+    if (focus) tabs[index].focus();
+  };
+  tabs.forEach((tab, i) => tab.addEventListener('click', () => select(i)));
+  menu.querySelector('[role="tablist"]').addEventListener('keydown', event => {
+    const i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    const next = { ArrowRight: (i + 1) % tabs.length, ArrowLeft: (i + tabs.length - 1) % tabs.length, Home: 0, End: tabs.length - 1 }[event.key];
+    if (next === undefined) return;
+    event.preventDefault();
+    select(next, true);
+  });
+  const showHash = hash => {
+    const index = panels.findIndex(panel => `#${panel.id}` === hash);
+    if (index >= 0) select(index);
+  };
+  addEventListener('hashchange', () => showHash(location.hash));
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href]');
+    if (link && link.pathname === location.pathname) showHash(link.hash);
+  });
+  showHash(location.hash);
+})();
