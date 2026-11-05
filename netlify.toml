@@ -1,7 +1,7 @@
-# Salumée V3.1 — demo su Netlify.
+# Salumée V4 — sito statico con tre pagine e sequenza Mortadella.
 # Pubblica solo ciò che serve alla pagina (niente sorgenti, prove o documenti).
 [build]
-  command = "rm -rf _site && mkdir -p _site/assets && cp -r index.html robots.txt css js _site/ && cp -r assets/img assets/fonts _site/assets/"
+  command = "rm -rf _site && mkdir -p _site/assets && cp index.html macelleria.html paninoteca.html robots.txt _site/ && cp -R css js _site/ && cp -R assets/fonts assets/img assets/seq _site/assets/"
   publish = "_site"
 
 # Demo non indicizzata dai motori di ricerca
