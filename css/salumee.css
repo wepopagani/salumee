@@ -657,6 +657,43 @@ body.dialog-open{overflow:hidden}
 @keyframes gate-photo{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
 .gate.is-skip .gate-photo{animation-duration:.01ms!important;animation-delay:0s!important}
 
+/* Recensioni autentiche: estratti e valutazione verificati sulla scheda Google. */
+.voices{background:var(--carbone);color:var(--crema)}
+.voices-top{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+.voices .kicker{color:var(--rosa)}
+.voices-title{font-size:clamp(52px,6.8vw,112px);line-height:.98;margin-top:18px}
+.voices-title .l-red{color:var(--rosso)}
+.voices-score{display:grid;justify-items:end;gap:8px;text-decoration:none;flex:none;padding-bottom:5px}
+.voices-score strong{font-family:var(--f-display);font-weight:400;font-size:clamp(62px,6vw,96px);line-height:1}
+.voices-score strong span{font-family:var(--f-text);font-size:20px;margin-left:7px;color:var(--muted-carbone)}
+.voices-score>span:last-child{font-size:14px;color:var(--muted-carbone)}
+.voices-stars{color:#e0b45f;letter-spacing:.12em;font-size:18px;line-height:1.2}
+.voices-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+.voices-card{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(22px,2.5vw,38px);border:1px solid rgba(243,233,213,.24);background:rgba(243,233,213,.025);min-width:0}
+.voices-card blockquote{font-size:clamp(20px,1.8vw,28px);font-weight:500;line-height:1.5;margin:24px 0 32px;flex:1}
+.voices-author{display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.45}
+.voices-author strong{display:block;font-weight:800}
+.voices-initials{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:rgba(243,233,213,.1);font-size:12px;font-weight:800;flex:none}
+.voices-source{display:block;color:var(--muted-carbone);font-size:12px;margin-top:3px}
+.voices-bottom{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:28px}
+.voices-note{font-size:12px;line-height:1.65;color:var(--muted-carbone);max-width:34em}
+.voices-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.voices-actions .btn{font-size:20px;gap:10px}
+@media(max-width:899.98px){
+  .voices-list{grid-template-columns:1fr}
+  .voices-card blockquote{font-size:23px;margin-block:18px 24px}
+  .voices-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:479.98px){
+  .voices-top{align-items:flex-start;flex-direction:column;gap:26px}
+  .voices-score{justify-items:start;grid-template-columns:auto auto;align-items:center;column-gap:18px}
+  .voices-score strong{grid-row:span 2;font-size:62px}
+  .voices-score>span:last-child{font-size:12px}
+  .voices-list{margin-top:28px}
+  .voices-actions{gap:16px}
+  .voices-actions .btn{font-size:19px;padding-inline:18px}
+}
+
 /* Reparti: ingresso diretto in Macelleria e selettore sempre visibile. */
 .site-nav>.brand{margin-right:8px;flex:none}
 .department-switch{display:inline-flex;align-items:center;gap:2px;flex:none;margin-right:auto;padding:4px;border:1px solid rgba(243,233,213,.3);border-radius:999px}
