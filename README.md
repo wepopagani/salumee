@@ -6,7 +6,7 @@ Ingresso diretto in Macelleria e switch fra i due reparti sempre visibile in alt
 - `index.html`: ingresso diretto in Macelleria con Il Gigante, Il Deciso, Il Rustico e Il Goloso. Lo switch in alto a sinistra collega Macelleria e Paninoteca.
 - `macelleria.html`: stesso contenuto della landing, mantenuto per i collegamenti esistenti.
 - `paninoteca.html`: apertura della Mortadella allo scroll e menu.
-- Menu Macelleria: entrecôte, filetto, costine e salsicce; prosciutto crudo, mortadella, salame e speck. Disponibilità, quantità e prezzi si confermano su WhatsApp.
+- Menu Macelleria: entrecôte, filetto, costine, salsicce, costata di manzo, spiedini misti, pancetta da grigliare e petto di pollo; prosciutto crudo, mortadella, salame e speck. Disponibilità, quantità e prezzi si confermano su WhatsApp.
 - Ritiro su WhatsApp al +41 76 499 03 22: apre una bozza da completare e inviare.
 
 ## Recensioni Google
