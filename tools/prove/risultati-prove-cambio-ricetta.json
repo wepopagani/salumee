@@ -1,0 +1,428 @@
+{
+ "A_asset_reali": {
+  "1440x900": {
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "colori_prodotto_aperto": {
+    "mortadella": {
+     "formaggio": 0.48,
+     "pesto": 1.15
+    },
+    "porchetta": {
+     "formaggio": 0.25,
+     "pesto": 0.23
+    },
+    "tartare": {
+     "formaggio": 0.68,
+     "pesto": 0.07
+    }
+   },
+   "immagini_visibili": {
+    "mortadella": [
+     "focaccia-fondo.webp",
+     "ombra-mortadella.webp",
+     "ombra-pane-morbida.webp",
+     "focaccia-mortadella.webp",
+     "focaccia-pane.webp"
+    ],
+    "porchetta": [
+     "focaccia-porchetta.webp"
+    ],
+    "tartare": [
+     "focaccia-tartare.webp"
+    ]
+   },
+   "niente_formaggio_in_porchetta": true,
+   "niente_pesto_in_tartare": true,
+   "mortadella_aperta_a_strati": true,
+   "banco_tartare_poi_hero": {
+    "hero": [
+     "tartare"
+    ],
+    "pulsante": [
+     "tartare"
+    ],
+    "ingredienti": [
+     "Tartare di manzo",
+     "Stracciatella"
+    ],
+    "dialog": [
+     "Tartare",
+     "Tartare di manzo, Stracciatella",
+     "mg/focaccia-tartare.webp"
+    ],
+    "ok": true
+   },
+   "tastiera": {
+    "invio_porchetta": true,
+    "spazio_mortadella": true,
+    "focus": "mortadella"
+   },
+   "clic_mouse_scroll_invariato": true,
+   "chiusura_e_banco": {
+    "mostrata": [
+     "porchetta"
+    ],
+    "banco": "porchetta",
+    "traveler": "/img/focaccia-porchetta.webp"
+   },
+   "errori_console": []
+  },
+  "1024x768": {
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "colori_prodotto_aperto": {
+    "mortadella": {
+     "formaggio": 0.38,
+     "pesto": 1.11
+    },
+    "porchetta": {
+     "formaggio": 0.2,
+     "pesto": 0.15
+    },
+    "tartare": {
+     "formaggio": 0.57,
+     "pesto": 0.06
+    }
+   },
+   "immagini_visibili": {
+    "mortadella": [
+     "focaccia-fondo.webp",
+     "ombra-mortadella.webp",
+     "ombra-pane-morbida.webp",
+     "focaccia-mortadella.webp",
+     "focaccia-pane.webp"
+    ],
+    "porchetta": [
+     "focaccia-porchetta.webp"
+    ],
+    "tartare": [
+     "focaccia-tartare.webp"
+    ]
+   },
+   "niente_formaggio_in_porchetta": true,
+   "niente_pesto_in_tartare": true,
+   "mortadella_aperta_a_strati": true,
+   "banco_tartare_poi_hero": {
+    "hero": [
+     "tartare"
+    ],
+    "pulsante": [
+     "tartare"
+    ],
+    "ingredienti": [
+     "Tartare di manzo",
+     "Stracciatella"
+    ],
+    "dialog": [
+     "Tartare",
+     "Tartare di manzo, Stracciatella",
+     "mg/focaccia-tartare.webp"
+    ],
+    "ok": true
+   },
+   "tastiera": {
+    "invio_porchetta": true,
+    "spazio_mortadella": true,
+    "focus": "mortadella"
+   },
+   "clic_mouse_scroll_invariato": true,
+   "chiusura_e_banco": {
+    "mostrata": [
+     "porchetta"
+    ],
+    "banco": "porchetta",
+    "traveler": "/img/focaccia-porchetta.webp"
+   },
+   "errori_console": []
+  },
+  "390x844": {
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "colori_prodotto_aperto": {
+    "mortadella": {
+     "formaggio": 0.21,
+     "pesto": 1.13
+    },
+    "porchetta": {
+     "formaggio": 0.18,
+     "pesto": 0.18
+    },
+    "tartare": {
+     "formaggio": 0.54,
+     "pesto": 0.07
+    }
+   },
+   "immagini_visibili": {
+    "mortadella": [
+     "focaccia-fondo.webp",
+     "ombra-mortadella.webp",
+     "ombra-pane-morbida.webp",
+     "focaccia-mortadella.webp",
+     "focaccia-pane.webp"
+    ],
+    "porchetta": [
+     "focaccia-porchetta.webp"
+    ],
+    "tartare": [
+     "focaccia-tartare.webp"
+    ]
+   },
+   "niente_formaggio_in_porchetta": true,
+   "niente_pesto_in_tartare": true,
+   "mortadella_aperta_a_strati": true,
+   "banco_tartare_poi_hero": {
+    "hero": [
+     "tartare"
+    ],
+    "pulsante": [
+     "tartare"
+    ],
+    "ingredienti": [
+     "Tartare di manzo",
+     "Stracciatella"
+    ],
+    "dialog": [
+     "Tartare",
+     "Tartare di manzo, Stracciatella",
+     "mg/focaccia-tartare.webp"
+    ],
+    "ok": true
+   },
+   "tastiera": {
+    "invio_porchetta": true,
+    "spazio_mortadella": true,
+    "focus": "mortadella"
+   },
+   "chiusura_e_banco": {
+    "mostrata": [
+     "porchetta"
+    ],
+    "banco": "porchetta",
+    "traveler": "/img/focaccia-porchetta.webp"
+   },
+   "errori_console": []
+  },
+  "360x780": {
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "colori_prodotto_aperto": {
+    "mortadella": {
+     "formaggio": 0.2,
+     "pesto": 0.96
+    },
+    "porchetta": {
+     "formaggio": 0.21,
+     "pesto": 0.16
+    },
+    "tartare": {
+     "formaggio": 0.5,
+     "pesto": 0.08
+    }
+   },
+   "immagini_visibili": {
+    "mortadella": [
+     "focaccia-fondo.webp",
+     "ombra-mortadella.webp",
+     "ombra-pane-morbida.webp",
+     "focaccia-mortadella.webp",
+     "focaccia-pane.webp"
+    ],
+    "porchetta": [
+     "focaccia-porchetta.webp"
+    ],
+    "tartare": [
+     "focaccia-tartare.webp"
+    ]
+   },
+   "niente_formaggio_in_porchetta": true,
+   "niente_pesto_in_tartare": true,
+   "mortadella_aperta_a_strati": true,
+   "banco_tartare_poi_hero": {
+    "hero": [
+     "tartare"
+    ],
+    "pulsante": [
+     "tartare"
+    ],
+    "ingredienti": [
+     "Tartare di manzo",
+     "Stracciatella"
+    ],
+    "dialog": [
+     "Tartare",
+     "Tartare di manzo, Stracciatella",
+     "mg/focaccia-tartare.webp"
+    ],
+    "ok": true
+   },
+   "tastiera": {
+    "invio_porchetta": true,
+    "spazio_mortadella": true,
+    "focus": "mortadella"
+   },
+   "chiusura_e_banco": {
+    "mostrata": [
+     "porchetta"
+    ],
+    "banco": "porchetta",
+    "traveler": "/img/focaccia-porchetta.webp"
+   },
+   "errori_console": []
+  },
+  "caricamenti": {
+   "tartare_lenta_poi_porchetta": {
+    "durante_attesa_visibile": [
+     "mortadella"
+    ],
+    "pulsante_in_attesa": [
+     "tartare"
+    ],
+    "finale": [
+     "porchetta"
+    ],
+    "ok": true
+   },
+   "raffica_torna_a_mortadella": {
+    "finale": [
+     "mortadella"
+    ],
+    "ok": true
+   },
+   "raffica_finisce_su_tartare": {
+    "finale": [
+     "tartare"
+    ],
+    "ok": true
+   },
+   "errori_console": [],
+   "tartare_mancante": {
+    "mostrata": [
+     "mortadella"
+    ],
+    "pulsante": [
+     "mortadella"
+    ],
+    "banco": "mortadella",
+    "avvisi": [
+     "warning: Salumée: ricetta non disponibile tartare immagine non disponibile: assets/img/focaccia-tartare.webp"
+    ],
+    "ok": true
+   }
+  },
+  "movimento_ridotto": {
+   "390x844": {
+    "classe_rm": true,
+    "tartare": true,
+    "porchetta": true,
+    "selettore_fermo": true,
+    "scroll_invariato": true,
+    "ingredienti_lista": [
+     "Porchetta",
+     "Pesto di pistacchio",
+     "Pomodorini secchi"
+    ],
+    "errori": []
+   },
+   "1440x900": {
+    "classe_rm": true,
+    "tartare": true,
+    "porchetta": true,
+    "selettore_fermo": true,
+    "scroll_invariato": true,
+    "ingredienti_lista": [
+     "Porchetta",
+     "Pesto di pistacchio",
+     "Pomodorini secchi"
+    ],
+    "errori": []
+   }
+  }
+ },
+ "B_fixture": {
+  "1440x900": {
+   "livelli_pronti": [
+    "mortadella:true",
+    "porchetta:true",
+    "tartare:true"
+   ],
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "durata_cambio_ms": [
+    462,
+    464,
+    468,
+    470,
+    474,
+    478,
+    487,
+    489,
+    500,
+    521
+   ],
+   "pane_fermo": {
+    "pixel_pane": 79024,
+    "fotogrammi": 5,
+    "diff_media_max": 0.85,
+    "diff_p99_max": 3.0,
+    "ok": true
+   },
+   "copertura_min_rispetto_a_prima": 0.783,
+   "ultimo_tap_lento": {
+    "durante": [
+     "mortadella"
+    ],
+    "in_attesa": [
+     "tartare"
+    ],
+    "finale": [
+     "porchetta"
+    ],
+    "aperta_a_strati": true,
+    "ok": true
+   },
+   "errori_console": []
+  },
+  "390x844": {
+   "livelli_pronti": [
+    "mortadella:true",
+    "porchetta:true",
+    "tartare:true"
+   ],
+   "coppie_provate": 18,
+   "coppie_ko": [],
+   "durata_cambio_ms": [
+    458,
+    459,
+    461,
+    464,
+    468,
+    469,
+    472,
+    474
+   ],
+   "pane_fermo": {
+    "pixel_pane": 20113,
+    "fotogrammi": 12,
+    "diff_media_max": 1.45,
+    "diff_p99_max": 3.0,
+    "ok": true
+   },
+   "copertura_min_rispetto_a_prima": 0.816,
+   "ultimo_tap_lento": {
+    "durante": [
+     "mortadella"
+    ],
+    "in_attesa": [
+     "tartare"
+    ],
+    "finale": [
+     "porchetta"
+    ],
+    "aperta_a_strati": true,
+    "ok": true
+   },
+   "errori_console": []
+  }
+ }
+}

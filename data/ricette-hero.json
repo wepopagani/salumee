@@ -1,0 +1,225 @@
+{
+  "nota": "Stato condiviso hero/banco. Una ricetta si apre a strati solo se 'open' è completo; altrimenti mostra il suo poster chiuso. Coordinate nel canvas 1536x1024. I livelli si aggiungono con tools/aggiungi_livelli.py, che li controlla e aggiorna questo file.",
+  "defaultRecipe": "mortadella",
+  "recipes": [
+    {
+      "id": "mortadella",
+      "menuId": "mortadella",
+      "posterFrom": "#plate-img-mortadella",
+      "poster": "assets/img/focaccia-intera.webp",
+      "caption": [
+        "Mortadella, stracciatella",
+        "e pesto di pistacchio"
+      ],
+      "ingredients": [
+        {
+          "name": "Mortadella",
+          "layer": "filling",
+          "text": "Pieghe sottili, sapore pieno: il cuore di questa focaccia."
+        },
+        {
+          "name": "Stracciatella",
+          "layer": "bottom",
+          "text": "La parte cremosa, in contrasto con la crosta."
+        },
+        {
+          "name": "Pesto di pistacchio",
+          "layer": "bottom",
+          "text": "La nota verde che lega tutto. Nel menu c’è anche la versione con pesto genovese."
+        }
+      ],
+      "closedAnchors": [
+        {
+          "x": 800,
+          "y": 525
+        },
+        {
+          "x": 560,
+          "y": 615
+        },
+        {
+          "x": 255,
+          "y": 650
+        }
+      ],
+      "open": {
+        "lid": "assets/img/focaccia-pane.webp",
+        "filling": "assets/img/focaccia-mortadella.webp",
+        "bottom": "assets/img/focaccia-fondo.webp",
+        "shadowFilling": "assets/img/ombra-mortadella.webp",
+        "shadowLidContact": "assets/img/ombra-pane-contatto.webp",
+        "shadowLidSoft": "assets/img/ombra-pane-morbida.webp",
+        "anchors": {
+          "desk": [
+            {
+              "x": 760,
+              "y": 470
+            },
+            {
+              "x": 600,
+              "y": 640
+            },
+            {
+              "x": 960,
+              "y": 705
+            }
+          ],
+          "phone": [
+            {
+              "x": 820,
+              "y": 455
+            },
+            {
+              "x": 430,
+              "y": 612
+            },
+            {
+              "x": 1120,
+              "y": 688
+            }
+          ]
+        },
+        "registrationMeanDiff": 15.4,
+        "verifica": {
+          "registrazione": 15.4,
+          "sagoma": 0.996,
+          "pane": 16.3,
+          "nota": "misure di tools/aggiungi_livelli.py (contorni inclusi, fondo carbone); la V3 riportava 8,4/255 misurando il solo interno"
+        }
+      },
+      "controlli": {}
+    },
+    {
+      "id": "porchetta",
+      "menuId": "porchetta",
+      "posterFrom": "#plate-img-porchetta",
+      "poster": "assets/img/focaccia-porchetta.webp",
+      "caption": [
+        "Porchetta, pesto di pistacchio",
+        "e pomodorini secchi"
+      ],
+      "ingredients": [
+        {
+          "name": "Porchetta",
+          "layer": "filling",
+          "text": "Fette sottili e arrostite: la protagonista di questa focaccia."
+        },
+        {
+          "name": "Pesto di pistacchio",
+          "layer": "bottom",
+          "text": "La nota verde che lega tutto."
+        },
+        {
+          "name": "Pomodorini secchi",
+          "layer": "filling",
+          "text": "Un tocco dolce e intenso tra le fette."
+        }
+      ],
+      "closedAnchors": [
+        {
+          "x": 640,
+          "y": 590
+        },
+        {
+          "x": 330,
+          "y": 655
+        },
+        {
+          "x": 880,
+          "y": 512
+        }
+      ],
+      "open": null,
+      "assetsToCreate": [
+        {
+          "role": "filling",
+          "file": "assets/img/porchetta-strato.webp",
+          "must": "solo porchetta e pomodorini secchi"
+        },
+        {
+          "role": "bottom",
+          "file": "assets/img/porchetta-fondo.webp",
+          "must": "pane inferiore, pesto, carta; nessun formaggio"
+        }
+      ],
+      "controlli": {
+        "bottom": {
+          "vietati": [
+            "formaggio"
+          ],
+          "attesi": [
+            "pesto"
+          ]
+        },
+        "filling": {
+          "vietati": [
+            "formaggio",
+            "pesto"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tartare",
+      "menuId": "tartare",
+      "posterFrom": "#plate-img-tartare",
+      "poster": "assets/img/focaccia-tartare.webp",
+      "caption": [
+        "Tartare di manzo",
+        "e stracciatella"
+      ],
+      "ingredients": [
+        {
+          "name": "Tartare di manzo",
+          "layer": "filling",
+          "text": "Manzo crudo tagliato finemente."
+        },
+        {
+          "name": "Stracciatella",
+          "layer": "bottom",
+          "text": "La parte cremosa, in contrasto con la carne cruda."
+        }
+      ],
+      "closedAnchors": [
+        {
+          "x": 420,
+          "y": 660
+        },
+        {
+          "x": 700,
+          "y": 560
+        }
+      ],
+      "open": null,
+      "assetsToCreate": [
+        {
+          "role": "filling",
+          "file": "assets/img/tartare-strato.webp",
+          "must": "solo tartare di manzo"
+        },
+        {
+          "role": "bottom",
+          "file": "assets/img/tartare-fondo.webp",
+          "must": "pane inferiore, stracciatella, carta; nessun pesto né pistacchio"
+        }
+      ],
+      "lidNote": "Il pane del poster Tartare non coincide con focaccia-pane: servono un pane dedicato o un poster riallineato.",
+      "controlli": {
+        "bottom": {
+          "vietati": [
+            "pesto"
+          ],
+          "attesi": [
+            "formaggio"
+          ]
+        },
+        "filling": {
+          "vietati": [
+            "pesto",
+            "formaggio"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+SALUMÉE — HOMEPAGE V3.1
+5 novembre 2026 · Proposta locale, non pubblicata (noindex, nofollow).
+
+APRIRE
+- Più semplice: dist/salumee-v3.1-autonomo.html (un solo file, immagini e font
+  incorporati, funziona offline).
+- Progetto: index.html, tenendo insieme le cartelle css, js, data e assets.
+Nessuna installazione, nessun server, nessun account. I link a Instagram,
+Uber Eats e Maps richiedono Internet.
+
+NOVITÀ V3.1 — CAMBIO DI RICETTA NELLA SCENA INIZIALE
+Sotto la focaccia ci sono tre pulsanti: Mortadella / Porchetta / Tartare.
+- La scelta è un solo stato condiviso con il banco: cambiare nella hero cambia
+  il banco (nome, prezzo, piatto, dialog) e viceversa; tornando alla hero si
+  ritrova la ricetta scelta.
+- Il cambio non tocca scroll né apertura: si può fare a focaccia chiusa, a metà
+  apertura o aperta. Continuando a scorrere si richiude la ricetta scelta, che
+  poi scende sul piatto del banco.
+- A focaccia aperta (livelli disponibili): il pane resta fermo, la farcitura
+  esce di lato, il fondo cambia sotto il pane, la nuova farcitura entra dal lato
+  opposto. 460 ms. Nome, ingredienti, pin, didascalia e testo alternativo
+  cambiano insieme a metà del passaggio.
+- Le immagini della ricetta scelta vengono decodificate PRIMA di mostrarla;
+  nell'attesa resta visibile quella attuale (il pulsante mostra un punto rosso).
+  Vince sempre l'ultimo tap. Se un'immagine manca, resta l'ultima composizione
+  valida e la scelta torna a quella mostrata.
+- Movimento ridotto: cambio immediato con una dissolvenza di 160 ms.
+- L'ingrediente scelto resta selezionato se esiste anche nella nuova ricetta
+  (es. Stracciatella, Pesto di pistacchio), altrimenti si torna al primo.
+
+STATO ATTUALE — DA LEGGERE
+- Mortadella: si apre a strati ed è completa.
+- Porchetta e Tartare: i livelli separati NON esistono ancora (vedi
+  MATERIALI-E-PROMPT.txt). Fino al loro arrivo, a focaccia aperta queste due
+  ricette mostrano il loro poster chiuso, con pin, nome e ingredienti corretti.
+  Il cambio «a focaccia aperta» per Porchetta e Tartare quindi NON è completo:
+  il meccanismo è pronto e provato con livelli di prova, ma servono i quattro
+  asset reali (strato e fondo di ciascuna; per la Tartare anche un pane
+  dedicato o un poster riallineato).
+- Quando i livelli arrivano:
+      python3 tools/aggiungi_livelli.py porchetta --strato porchetta-strato.png --fondo porchetta-fondo.png
+      python3 tools/aggiungi_livelli.py tartare --strato tartare-strato.png --fondo tartare-fondo.png --pane tartare-pane.png
+  Lo strumento controlla canvas, trasparenza, registrazione sul poster, pane e
+  ingredienti vietati (niente formaggio nella Porchetta, niente pesto nella
+  Tartare), crea le ombre, aggiorna data/ricette-hero.json e rigenera la pagina.
+  Nessuna modifica al codice è necessaria. Con --prova esegue solo i controlli.
+
+COSA PROVARE
+1. Prima schermata: Mortadella. Prova il selettore subito, poi scorri.
+2. Scorri finché la focaccia è aperta e cambia ricetta: lo scroll resta dov'è.
+3. Tocca gli ingredienti: il livello si avvicina e il dettaglio cambia.
+4. «Guarda dentro» porta direttamente all'esplorazione (focus sul primo pin).
+5. Continua a scorrere: la ricetta scelta si richiude e atterra sul banco.
+6. Al banco cambia specialità e risali: la hero mostra la stessa.
+7. «Il menu» nell'header salta al menu completo in qualsiasi momento.
+8. Menu completo: ricerca, ricerche rapide, «Azzera». Sedi: Bellinzona / Claro.
+
+STRUTTURA
+index.html                 generato: non modificarlo a mano
+src/template.html          struttura della pagina
+data/menu-e-orari.json     UNICA fonte di menu, prezzi, sedi e orari
+data/ricette-hero.json     le tre ricette della hero: ingredienti, testi, punti
+                           dei pin, livelli disponibili e controlli
+css/salumee.css            un solo foglio di stile, in sezioni numerate
+js/salumee.js              un solo script, nessuna dipendenza
+tools/build.py             genera index.html (con --standalone anche la versione autonoma)
+tools/aggiungi_livelli.py  controlla e integra i livelli aperti di una ricetta
+tools/deriva_livelli.py    ricava in modo deterministico i livelli mortadella/fondo
+tools/prove/               script delle prove eseguite (Playwright + Chrome)
+assets/img                 immagini web (WebP)
+assets/fonts               Anton e Manrope, SIL OFL 1.1 (licenze incluse)
+assets/sorgenti            ritaglio PNG del logo e master PNG dei livelli derivati
+schermate/                 V3.1: selettore, cambi a focaccia aperta, banco sincronizzato
+                           (le schermate V3 restano in schermate/v3)
+dist/                      versione autonoma
+
+MODIFICARE MENU, PREZZI O ORARI
+1. Modifica data/menu-e-orari.json.
+2. Esegui:  python3 tools/build.py --standalone
+Le tre specialità del banco sono indicate in tools/build.py (BANCO) e devono
+corrispondere alle ricette di data/ricette-hero.json.
+Un giorno senza «opens» non viene mostrato e non diventa mai «chiuso».
+
+FLUIDITÀ (V3.1)
+- Tutto ciò che si muove o si dissolve a ogni frame ha un proprio livello di
+  composizione: durante lo scroll il browser sposta immagini già pronte invece
+  di ridisegnarle. Le proprietà di stile si scrivono solo quando cambiano.
+- La copia che scende sul banco ha dimensione fissa e cambia scala con una
+  trasformazione (prima cambiava larghezza e altezza: ridisegno a ogni frame).
+- A focaccia chiusa i livelli nascosti sotto l'immagine intera non vengono
+  disegnati.
+- Cambio ricetta: i testi escono e rientrano in dissolvenza, la pillola del
+  selettore scorre sotto il pulsante scelto, nessuna misura di layout durante
+  il passaggio.
+- Banco aggiornato fuori schermo senza animazioni; menu mobile, chiusura del
+  dettaglio ed espansione del menu ora in dissolvenza.
+- Misure prima/dopo in VERIFICHE.txt (sezione E); script:
+  tools/prove/misura_fluidita.py.
+
+REGIA (invariata dalla V3)
+- Una sola timeline: geometria, testi, pin e passaggio usano lo stesso valore
+  di scroll smorzato nel tempo (costante 85 ms). Il ciclo si ferma da solo.
+- Pin calcolati dalla stessa trasformazione dei livelli.
+- Passaggio al banco con una copia temporanea dell'immagine della ricetta
+  scelta: parte dal prodotto della hero e atterra sul piatto (±0,06 px).
+- Telefono: testo in alto, prodotto sopra il selettore; sotto 560 px di
+  altezza nessun pin (contenuti in flusso, selettore sotto il prodotto).
+
+MODALITÀ
+- Scena animata: JavaScript attivo e movimento consentito.
+- Movimento ridotto o senza JavaScript: prodotto composto, ingredienti in lista,
+  contenuti in flusso. Senza JavaScript il selettore non compare (non servirebbe).
+- Se i livelli di una ricetta non si caricano: resta il suo poster chiuso,
+  con pin sugli ingredienti visibili.
+- Se manca l'immagine della prima ricetta: i livelli la sostituiscono (senza
+  livelli compare la sua didascalia); il passaggio al banco si disattiva.

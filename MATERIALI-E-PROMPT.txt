@@ -1,0 +1,133 @@
+SALUMÉE V3.1 — PROVENIENZA DEGLI ASSET E PROMPT NON ESEGUITI
+5 novembre 2026
+
+V3.1 · I QUATTRO LIVELLI MANCANTI (DA PRODURRE)
+In questa sessione non era disponibile un generatore di immagini: i livelli non
+sono stati creati. Non è possibile ricavarli in modo onesto dai poster: la
+superficie della farcitura e del fondo coperta dal pane superiore non esiste
+nell'immagine. Non sono stati sostituiti con i livelli della Mortadella
+(porterebbero stracciatella nella Porchetta e pesto nella Tartare):
+tools/aggiungi_livelli.py li rifiuta, ed è stato verificato (tavole in
+schermate/verifica-livelli-*-rifiuto.png).
+
+File attesi (canvas 1536×1024, stessa camera e posizione del poster, vera trasparenza):
+  porchetta-strato   solo porchetta e pomodorini secchi
+  porchetta-fondo    pane inferiore, pesto di pistacchio, carta — nessun formaggio
+  tartare-strato     solo tartare di manzo
+  tartare-fondo      pane inferiore, stracciatella, carta — nessun pesto né pistacchio
+  tartare-pane       CONSIGLIATO: il pane superiore del poster Tartare non coincide
+                     con quello condiviso (differenza misurata 28,0/255 contro
+                     15,2 della Porchetta e 16,3 della Mortadella). In alternativa
+                     va rigenerato il poster Tartare con il pane condiviso.
+Riferimenti da allegare al generatore: assets/img/focaccia-porchetta.webp,
+assets/img/focaccia-tartare.webp, assets/img/focaccia-pane.webp e le foto dei
+prodotti negli screenshot forniti.
+
+PROMPT — STRATO PORCHETTA
+Extract only the thin folded roast pork porchetta filling with its sun-dried
+tomato pieces from the supplied porchetta focaccia image. No bread, cheese,
+paper, backdrop or green pesto layer. Preserve original 1536x1024 canvas,
+camera, scale and source position. Reveal only the natural hidden continuation
+of the filling. True transparent background, no glow, no text. This layer
+will replace mortadella inside the same open sandwich web animation.
+
+PROMPT — FONDO PORCHETTA
+Keep only the lower focaccia bread, green pistachio pesto and cream deli paper
+from the supplied porchetta image. Remove the top lid, all roast pork and
+sun-dried tomatoes. Absolutely no white stracciatella or cheese. Preserve
+the original 1536x1024 canvas, camera, lighting, scale and pixel placement.
+Reveal pesto naturally where meat was removed. True transparent background,
+no glow, no text. This is the bottom layer of the porchetta recipe.
+
+PROMPT — STRATO TARTARE
+Extract only the ruby red finely chopped raw beef tartare from the supplied
+tartare focaccia image. No bread, cheese, pesto, paper or background. Keep
+the original 1536x1024 canvas, three-quarter camera, scale, lighting and
+source placement. Natural plausible continuation where cheese occluded it.
+True transparency, no glow, no text, no new ingredients. Illustrative asset.
+
+PROMPT — FONDO TARTARE
+Keep only the lower focaccia bread, white stracciatella and cream deli paper
+from the supplied tartare image. Remove the top bread and all red beef.
+Absolutely no green pesto, pistachios or sun-dried tomatoes. Preserve the
+original 1536x1024 canvas, camera, scale, lighting and source placement.
+The white cheese should occupy a natural lower topping surface. True
+transparent background, no glow, no text. Illustrative bottom layer.
+
+PROMPT — PANE TARTARE (aggiunto in V3.1, per il motivo indicato sopra)
+Extract only the top focaccia lid from the supplied tartare focaccia image:
+the upper bread slice with its crust, dimples and salt. No beef, cheese,
+paper or background. Preserve the original 1536x1024 canvas, camera, scale,
+lighting and exact pixel placement. Reveal the natural underside edge where
+the filling touched it. True transparency, no glow, no text. Illustrative.
+
+DOPO LA GENERAZIONE
+  python3 tools/aggiungi_livelli.py porchetta --strato … --fondo … --prova
+Controlla la tavola tools/prove/verifica-livelli-porchetta.png (poster, livelli
+a riposo, differenza, anteprima aperta, rilevatori di formaggio e pesto); se è
+corretta ripeti senza --prova. Soglie: registrazione ≤25 buona, ≤35 accettabile;
+sagoma ≥0,95; pane ≤22; formaggio vietato oltre 1%, pesto vietato oltre 0,8%.
+I rilevatori di colore sono indicativi: la verifica visiva resta necessaria.
+
+FIXTURE DI PROVA (NON SONO ASSET)
+tools/prove/prove_cambio_ricetta.py crea in memoria livelli finti, ricolorati
+in modo evidente a partire da quelli della Mortadella, e li inietta nella
+pagina solo durante la prova, per verificare la meccanica del cambio aperto.
+Non vengono salvati nel sito e non rappresentano Porchetta o Tartare.
+
+V3 · STRUMENTI
+In questo lavoro non era disponibile un generatore di immagini o video.
+Nessuna nuova immagine è stata generata. Tutti i file sono stati ottenuti con
+operazioni deterministiche (ritagli, maschere colore, morfologia, inpainting
+OpenCV, ricompressione WebP) a partire dal materiale ricevuto.
+
+FOCACCIA (illustrativa, AI, come nella V2)
+- focaccia-intera.webp, focaccia-pane.webp: ricodificati dai PNG originali
+  della prima proposta.
+- focaccia-mortadella.webp (NUOVO): mortadella estratta dai pixel della base
+  originale (pane inferiore + farcitura), quindi già allineata all'intera.
+- focaccia-fondo.webp (NUOVO): base originale fuori dalla mortadella; sotto la
+  mortadella, il fondo V2 (focaccia-fondo) e un riempimento inpainting dove
+  mancava superficie. Script: tools/deriva_livelli.py (riproduce i file
+  identici). Master PNG in assets/sorgenti.
+  Limite: sotto alcune pieghe restano briciole chiare di stracciatella attaccate
+  alla mortadella; visibili solo da vicino nello stato aperto.
+- ombra-*.webp: ombre calcolate dalle trasparenze dei livelli.
+- focaccia-tartare.webp, focaccia-porchetta.webp: dalla V2, ricodificate.
+I file V2 «mortadella-strato» e «focaccia-fondo» non sono più usati in pagina.
+
+LOGO (riferimento raster, non vettoriale ufficiale)
+- assets/sorgenti/logo-salumee-riferimento.png: ritaglio dello screenshot
+  02-logo-fornito.png (x 42–948, y 310–962), pixel invariati.
+- assets/img/logo-salumee.webp: lo stesso ritaglio in WebP q95 (scarto max 8/255).
+- Il fondo nero resta nel file; in pagina diventa invisibile sul carbone con
+  mix-blend-mode: lighten, senza ricolorare il marchio. Va usato su fondi scuri.
+Per sostituirlo con l'originale basta cambiare assets/img/logo-salumee.webp.
+
+INSEGNA E FOTO REALI
+- insegna-bellinzona.webp: ritaglio di 03-insegna-bellinzona.png (y 40–660),
+  mostrata al massimo a 468 px per non ingrandire la sorgente.
+- menu-foto-1/2/3.webp: le tre foto contenute nella storia del menu
+  (04-menu-instagram.png), senza interfaccia Instagram; mostrate a 200 px.
+  Le ricette fotografate non sono nominate.
+- La griglia del profilo (01-profilo-prodotti-e-logo.png) è stata usata solo
+  come riferimento: contiene interfaccia del browser e persone.
+
+PROMPT DA ESEGUIRE CON UN GENERATORE (non eseguiti qui)
+I testi completi sono nel dossier ricevuto, 04-direzione-creativa/
+03-PRODUZIONE-ASSET.txt. In sintesi e in ordine di utilità per la V3:
+- PROMPT A — Poster principale con proporzioni più fedeli ai prodotti reali
+  (pane più contenuto, farcitura naturale), canvas 1536×1024, alfa vera.
+- PROMPT B — Livelli coerenti dello stesso poster (pane superiore, mortadella,
+  fondo), stessa registrazione al pixel. Dopo la generazione: sovrapporre e
+  confrontare con il poster; in alternativa eseguire tools/deriva_livelli.py
+  sulla nuova base.
+- PROMPT C — Variante con focaccia al carbone (citata nel menu, +1.-).
+- PROMPT D — Video da 5 s per una sequenza di frame legata allo scroll.
+  La V3 è pronta per un'eventuale sequenza: basterebbe sostituire i livelli
+  nella scena con un canvas di frame; non è stato fatto perché il video non esiste.
+
+MATERIALE AUTENTICO DA CHIEDERE
+Logo vettoriale o PNG originale; foto della focaccia chiusa e aperta nella
+stessa inquadratura (o i livelli separati); foto delle due sedi e del banco;
+menu e orari correnti distinti per sede.

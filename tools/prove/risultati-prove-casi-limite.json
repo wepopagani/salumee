@@ -1,0 +1,171 @@
+{
+ "1024x768": {
+  "overflow_x": 0,
+  "errors": [],
+  "lid_top_vs_stage": [
+   {
+    "lidTop": 246,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 229,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 174,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 219,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 246,
+    "stageTop": 76
+   }
+  ]
+ },
+ "768x1024": {
+  "overflow_x": 0,
+  "errors": [],
+  "lid_top_vs_stage": [
+   {
+    "lidTop": 552,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 523,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 379,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 494,
+    "stageTop": 76
+   },
+   {
+    "lidTop": 552,
+    "stageTop": 76
+   }
+  ]
+ },
+ "360x780": {
+  "overflow_x": 0,
+  "errors": [],
+  "lid_top_vs_stage": [
+   {
+    "lidTop": 477,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 460,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 373,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 442,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 477,
+    "stageTop": 64
+   }
+  ]
+ },
+ "1440x900": {
+  "overflow_x": 0,
+  "errors": [],
+  "lid_top_vs_stage": [
+   {
+    "lidTop": 240,
+    "stageTop": 92
+   },
+   {
+    "lidTop": 215,
+    "stageTop": 92
+   },
+   {
+    "lidTop": 133,
+    "stageTop": 92
+   },
+   {
+    "lidTop": 200,
+    "stageTop": 92
+   },
+   {
+    "lidTop": 240,
+    "stageTop": 92
+   }
+  ]
+ },
+ "390x844": {
+  "overflow_x": 0,
+  "errors": [],
+  "lid_top_vs_stage": [
+   {
+    "lidTop": 520,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 502,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 408,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 483,
+    "stageTop": 64
+   },
+   {
+    "lidTop": 520,
+    "stageTop": 64
+   }
+  ]
+ },
+ "resize": {
+  "errors": [],
+  "overflow": 0,
+  "geo_after": {
+   "ps": 0,
+   "pe": 1200,
+   "bt": 1908
+  },
+  "traveler_vis": "hidden"
+ },
+ "missing_layer": {
+  "cls": [
+   "js",
+   "product"
+  ],
+  "full_opacity": "1",
+  "pins_vis": "visible",
+  "look_vis": "hidden",
+  "ing_items_visible": 1,
+  "errors": [],
+  "travel_still_works": "visible"
+ },
+ "missing_full": {
+  "cls": "product is-missing",
+  "traveler_vis": "hidden",
+  "errors": []
+ },
+ "reduced_motion_mobile": {
+  "overflow": 0,
+  "hero_h": 1164,
+  "stage_pos": "relative",
+  "ing_visible": 3,
+  "traveler": "hidden",
+  "errors": [],
+  "banco_switch": "1"
+ },
+ "no_js_mobile": {
+  "overflow": "n/d (JS off)"
+ }
+}

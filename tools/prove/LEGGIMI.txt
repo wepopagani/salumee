@@ -1,0 +1,12 @@
+Prove automatiche usate per VERIFICHE.txt (Playwright + Google Chrome).
+1. Dalla cartella del progetto:  python3 -m http.server 8766
+2. pip install playwright pillow numpy   (serve un Chrome installato; negli script è /usr/bin/google-chrome)
+3. python3 tools/prove/prove_interazioni.py http://localhost:8766/index.html
+   python3 tools/prove/prove_casi_limite.py
+   python3 tools/prove/prove_cambio_ricetta.py http://localhost:8766/index.html cartella-output
+   python3 tools/prove/misura_fluidita.py http://localhost:8766/index.html risultati.json
+prove_cambio_ricetta.py (V3.1) prova il cambio Mortadella / Porchetta / Tartare
+con gli asset reali e, in una seconda serie, con livelli FINTI creati in memoria
+e iniettati nella pagina solo durante la prova (fixture): servono a verificare
+la meccanica del cambio a focaccia aperta, non rappresentano le ricette.
+Le prove su telefono sono emulazioni di viewport e touch, non dispositivi reali.

@@ -1,0 +1,137 @@
+SALUMÉE V3.1 — PROVE ESEGUITE E LIMITI
+5 novembre 2026
+
+AMBIENTE
+Google Chrome headless pilotato con Playwright (Linux), pagina servita in HTTP
+locale; index.html e la versione autonoma anche da file:// . Le prove su
+telefono sono EMULAZIONI di viewport e touch in Chrome: non sono state fatte su
+un telefono fisico, né su Safari/iOS o Firefox. Script in tools/prove/,
+risultati grezzi in tools/prove/risultati-*.json.
+
+STATO DELLA FUNZIONE «CAMBIO RICETTA A FOCACCIA APERTA»
+- Completa per la Mortadella e per il meccanismo (stato condiviso, banco,
+  apertura e scroll invariati, decodifica prima del cambio, ultimo tap).
+- NON completa per Porchetta e Tartare: i loro livelli separati non esistono.
+  A focaccia aperta mostrano il poster chiuso della ricetta giusta, con pin e
+  ingredienti corretti. Il cambio aperto con pane fermo è stato provato solo con
+  livelli FINTI (serie B qui sotto), non con immagini vere di queste ricette.
+
+A · CAMBIO RICETTA CON GLI ASSET REALI (1440×900, 1024×768, 390×844, 360×780)
+- Ogni ricetta verso ciascuna delle altre con apertura 0%, 50% e 100%:
+  18 cambi per viewport, 72 in tutto. In tutti: posizione di scroll e altezza
+  della pagina invariate, trasformazione della scena (apertura) identica prima
+  e dopo, selettore fermo, e insieme coerenti fra loro: composizione visibile,
+  pulsante premuto, ingredienti, pin, didascalia, testo alternativo, scheda e
+  piatto del banco.                                                     OK
+- Ingredienti visibili a focaccia aperta (immagini davvero visibili + colore
+  sullo screenshot del prodotto):
+    Porchetta: si vede solo focaccia-porchetta.webp; «bianco formaggio» 0,18–0,25%
+    (sale e grasso), nessun livello con stracciatella.                  OK
+    Tartare: si vede solo focaccia-tartare.webp; pesto 0,06–0,08% contro
+    0,96–1,15% della Mortadella aperta.                                 OK
+- Mortadella aperta a strati (poster trasparente, livelli visibili).    OK
+- Banco → hero: scelta «Tartare» nel banco, dialog «Tartare» con la sua ricetta
+  e immagine; risalendo, la hero mostra la Tartare.                     OK
+- Hero → banco: ogni cambio nella hero aggiorna scheda, prezzo e piatto.  OK
+- Tastiera: Invio e Spazio sui pulsanti; il focus resta sul pulsante.   OK
+- Touch (emulato) sui telefoni; clic reale col mouse su desktop: scroll invariato. OK
+- Chiusura: continuando a scorrere si richiude la ricetta scelta; la copia
+  che scende sul banco è quella della ricetta scelta (Porchetta).       OK
+- Caricamento lento (Tartare ritardata 4,5 s, poi tocco Porchetta): durante
+  l'attesa resta visibile la Mortadella e il pulsante Tartare mostra l'attesa;
+  alla fine Porchetta, anche dopo l'arrivo della Tartare.               OK
+- Raffica Porchetta → Tartare → Mortadella con immagini lente: resta Mortadella.
+  Raffica Tartare → Porchetta → Tartare: finisce su Tartare.            OK
+- Immagine della Tartare bloccata: resta la Mortadella, la scelta torna a
+  Mortadella anche nel banco, avviso in console (non errore).           OK
+- Movimento ridotto (390×844 e 1440×900): cambio immediato, ingredienti in
+  lista aggiornati, selettore e scroll fermi (spazio della lista riservato
+  per la ricetta più lunga).                                            OK
+- Nessun errore JavaScript o console.                                   OK
+
+B · MECCANICA DEL CAMBIO APERTO CON FIXTURE (1440×900, 390×844)
+Livelli finti, ricolorati dalla Mortadella, iniettati solo durante la prova;
+per la Tartare anche un pane diverso, per provare quel caso.
+- 18 cambi per viewport (tutte le coppie, apertura 0/50/100%): scroll e
+  apertura invariati in ogni fotogramma campionato, stato coerente alla fine,
+  mai due farciture visibili insieme (0 fotogrammi).                    OK
+- Durata misurata del cambio: 458–521 ms (progetto: 460 ms; lo scarto è il
+  ritardo dei frame dell'ambiente headless).                            OK
+- Pane fermo con lo stesso pane (Mortadella → Porchetta): differenza media
+  massima sui pixel del pane 0,85/255 (desktop) e 1,45/255 (telefono).  OK
+- Verso un pane diverso (Porchetta → Tartare): nessun vuoto; nel fotogramma
+  peggiore resta visibile il 78–82% del prodotto (la farcitura uscente è
+  già sparita e la nuova sta entrando: scelta voluta per non mostrare due
+  farciture insieme).                                                   OK
+- Ultimo tap con livelli lenti a focaccia aperta: finale Porchetta a strati. OK
+
+C · STRUMENTO tools/aggiungi_livelli.py
+- Livelli Mortadella sulla Mortadella (--prova): registrazione 15,4/255,
+  sagoma 0,996, pane 16,3: accettati.                                    OK
+- Livelli Mortadella proposti per la Porchetta: RIFIUTATI (formaggio 3,12%
+  nel fondo; registrazione 38,5).                                       OK
+- Livelli Mortadella proposti per la Tartare: RIFIUTATI (pesto 2,82% nel
+  fondo; pane condiviso 28,0 > 22; registrazione 42,1).                  OK
+  Tavole: schermate/verifica-livelli-*.png
+- Nota: la V3 riportava 8,4/255 per la registrazione Mortadella con una
+  misura sul solo interno; lo strumento misura anche i contorni (15,4).
+
+D · REGRESSIONE V3 (rieseguita sulla V3.1)
+- Overflow orizzontale 0 px e nessun errore a 1440×900, 1024×768, 768×1024,
+  390×844, 360×780; resize e rotazione a metà scena senza errori.        OK
+- Una sola focaccia visibile in ogni posizione: 102 (desktop) e 84 (telefono)
+  posizioni a passi di 30 px.                                           OK
+- Passaggi hero → copia di viaggio ≤0,02 px, copia → piatto ≤0,06 px.    OK
+- Reversibilità dopo salti rapidi; ciclo rAF a riposo: 0 richiamate in 1 s. OK
+- Piccoli passi di rotella (4 px): pane al massimo 3,1 px (desktop) e
+  1,6 px (telefono) per passo.                                           OK
+- «Guarda dentro», pin da tastiera e clic, pin dentro lo schermo, focus
+  protetto, menu dall'header, menu mobile, banco (frecce, tasti, gesto),
+  dialog, ricerca, ricerche rapide, sedi.                               OK
+- «Il menu» su telefono: 72 px dal bordo in questa ripetizione; in una
+  precedente 137 px dopo la simulazione della barra del browser dell'emulatore
+  (già segnalato in V3): da controllare su un telefono.
+- Domenica mai «chiuso», Claro senza orari, nessun «aperto adesso».      OK
+- Livelli Mortadella bloccati: resta il poster chiuso con pin sugli ingredienti
+  visibili; il passaggio al banco funziona.                             OK
+- Poster bloccato: i livelli lo sostituiscono; passaggio disattivato.    OK
+- Selettore senza sovrapposizioni con «Guarda dentro» e con la scritta
+  «Scorri» a 360×780, 768×1024, 1024×768, 1280×720 (controllo geometrico e
+  visivo).                                                              OK
+
+E · FLUIDITÀ DELLE ANIMAZIONI (misura prima/dopo, tools/prove/misura_fluidita.py)
+Stesso ambiente e stessi scenari, prima e dopo l'intervento: scroll con la
+rotella dalla prima schermata fino al banco e ritorno, sei cambi di ricetta a
+focaccia aperta, quattro cambi al banco. Lavoro del browser per scenario
+(ridisegni = Paint; raster = immagini ridisegnate in pixel):
+                                      PRIMA                 DOPO
+  1440×900 scroll fino al banco       214 ridisegni, 998 ms  57 ridisegni, 100 ms raster
+  1440×900 scroll indietro            158, 732 ms           61, 83 ms
+  1440×900 cambi di ricetta           408, 1305 ms          436, 235 ms
+  390×844  scroll fino al banco       289, 384 ms           62, 44 ms
+  390×844  scroll indietro            162, 194 ms           49, 34 ms
+  390×844  cambi di ricetta           411, 507 ms           470, 113 ms
+  Prima apertura della focaccia: raster 403 → 47 ms (desktop), 130 → 17 ms (telefono).
+  Layout durante lo scroll: 10,5 → 0,4 ms (desktop), 21,4 → 0,5 ms (telefono).
+Interventi: livelli di composizione per tutto ciò che si dissolve, scritture di
+stile solo quando cambiano, copia di viaggio a dimensione fissa con scala,
+livelli coperti non disegnati, pin misurati in anticipo, pillola del selettore
+animata dal compositore, banco fuori schermo aggiornato senza animazioni.
+Limite della misura: Chrome headless non ha GPU e compone i livelli in software.
+A 1440×900 i frame oltre 20 ms restano simili prima e dopo (14–25 su ~180, il
+valore cambia da una ripetizione all'altra) perché il collo di bottiglia è quel
+compositore software, non la pagina; a 390×844 sono 0–1 su ~200 sia prima sia
+dopo. Il guadagno reale su un telefono o un computer con GPU va confermato
+provandoli: qui non è stato possibile.
+Animazioni aggiunte nella stessa passata: testi della ricetta in dissolvenza
+durante il cambio, pillola che scorre sotto il pulsante scelto, menu mobile in
+dissolvenza (Esc e focus invariati), chiusura del dettaglio in dissolvenza
+(anche con Esc; focus restituito), voci del menu che entrano in sequenza
+quando si apre la lista completa. Tutte disattivate con movimento ridotto.
+
+NON PROVATO
+- Telefoni e tablet fisici; Safari (iOS/macOS), Firefox, Samsung Internet.
+- Lettori di schermo reali (VoiceOver, NVDA): verificati ruoli, aria-pressed,
+  nomi e annuncio della lista ingredienti (aria-live) solo nel codice.
+- Il cambio aperto con livelli VERI di Porchetta e Tartare: non esistono ancora.
+- Prestazioni su dispositivi lenti e reti reali.

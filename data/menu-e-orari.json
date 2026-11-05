@@ -1,0 +1,295 @@
+{
+  "brand": {
+    "displayName": "Salumée",
+    "businessDescriptionsObserved": [
+      "Macelleria-Paninoteca",
+      "Macelleria-Salumeria"
+    ],
+    "locations": [
+      "Bellinzona",
+      "Claro"
+    ]
+  },
+  "source": {
+    "receivedOn": "2026-11-04",
+    "menuImage": "02-riferimenti/04-menu-instagram.png",
+    "menuStoryAgeLabel": "42 sett",
+    "hoursImage": "02-riferimenti/05-orari-bellinzona.png",
+    "hoursStoryAgeLabel": "51 sett",
+    "currentDataReconfirmed": false,
+    "note": "Trascrizione dagli screenshot forniti, non controllo di un listino attuale."
+  },
+  "menu": {
+    "scope": "Menu del profilo, con marchio Bellinzona; applicabilità a Claro non accertata",
+    "items": [
+      {
+        "id": "caprese",
+        "name": "Caprese",
+        "descriptionAsShown": "Pomodoro, Mozzarella di Bufala, P. Genovese, olio d’oliva",
+        "currency": "CHF",
+        "priceAsShown": "10.-",
+        "priceCHF": 10,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "mortadella",
+        "name": "Mortadella",
+        "descriptionAsShown": "Stracciatella, P. Pistacchio o Genovese",
+        "currency": "CHF",
+        "priceAsShown": "10/11.-",
+        "priceCHF": null,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed",
+        "priceOptionsCHF": [
+          10,
+          11
+        ],
+        "priceMapping": null,
+        "note": "Non è specificato quale opzione corrisponda a ciascun prezzo."
+      },
+      {
+        "id": "pancetta",
+        "name": "Pancetta",
+        "descriptionAsShown": "Formaggio d’Alpe, Pomodoro secco",
+        "currency": "CHF",
+        "priceAsShown": "11.-",
+        "priceCHF": 11,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "salame-piccante",
+        "name": "Salame / S. Piccante",
+        "descriptionAsShown": "Mozzarella di Bufala",
+        "currency": "CHF",
+        "priceAsShown": "11.-",
+        "priceCHF": 11,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "cotto-tacchino",
+        "name": "Cotto / Tacchino",
+        "descriptionAsShown": "Mozzarella di Bufala, Pomodorino secco",
+        "currency": "CHF",
+        "priceAsShown": "11.-",
+        "priceCHF": 11,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "coppa",
+        "name": "Coppa",
+        "descriptionAsShown": "Stracciatella, Tarallo sbriciolato",
+        "currency": "CHF",
+        "priceAsShown": "12.-",
+        "priceCHF": 12,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "finocchiona",
+        "name": "Finocchiona",
+        "descriptionAsShown": "Salame Toscano, Mozzarella di Bufala, Tarallo sbriciolato",
+        "currency": "CHF",
+        "priceAsShown": "12.-",
+        "priceCHF": 12,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "chorizo-bellota",
+        "name": "Chorizo Bellota",
+        "descriptionAsShown": "Salame Spagnolo, verdura a scelta",
+        "currency": "CHF",
+        "priceAsShown": "12.-",
+        "priceCHF": 12,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "autunno",
+        "name": "Autunno",
+        "descriptionAsShown": "Speck, Stracciatella, Crema di Zucca, Rucola",
+        "currency": "CHF",
+        "priceAsShown": "12.50",
+        "priceCHF": 12.5,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "roast-beef",
+        "name": "Roast-Beef",
+        "descriptionAsShown": "Roast-Beef, salsa Tartara",
+        "currency": "CHF",
+        "priceAsShown": "13.-",
+        "priceCHF": 13,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "jamon-serrano-iberico",
+        "name": "Jamón Serrano Ibérico",
+        "descriptionAsShown": "Pomodorini gialli o verdura a scelta",
+        "currency": "CHF",
+        "priceAsShown": "13.-",
+        "priceCHF": 13,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "prosciutto-crudo",
+        "name": "Prosciutto Crudo",
+        "descriptionAsShown": "Stracciatella, Pomodorini secchi o freschi",
+        "currency": "CHF",
+        "priceAsShown": "13.-",
+        "priceCHF": 13,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "porchetta",
+        "name": "Porchetta",
+        "descriptionAsShown": "Pesto di Pistacchio, Pomodorini secchi",
+        "currency": "CHF",
+        "priceAsShown": "13.-",
+        "priceCHF": 13,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "gorgonzola",
+        "name": "Gorgonzola",
+        "descriptionAsShown": "Prosciutto Crudo, Gorgonzola, verdura a scelta",
+        "currency": "CHF",
+        "priceAsShown": "13.50",
+        "priceCHF": 13.5,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "bresaola-carne-secca",
+        "name": "Bresaola / Carne Secca",
+        "descriptionAsShown": "Formaggio e verdura a scelta",
+        "currency": "CHF",
+        "priceAsShown": "14.50",
+        "priceCHF": 14.5,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "luganighetta",
+        "name": "Luganighetta",
+        "descriptionAsShown": "Luganighetta di maiale cruda, Formaggio e verdura a scelta",
+        "currency": "CHF",
+        "priceAsShown": "15.-",
+        "priceCHF": 15,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "tartare",
+        "name": "Tartare",
+        "descriptionAsShown": "Tartare di manzo, Stracciatella",
+        "currency": "CHF",
+        "priceAsShown": "16.-",
+        "priceCHF": 16,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      },
+      {
+        "id": "pata-negra",
+        "name": "Pata Negra",
+        "descriptionAsShown": "Prosciutto Crudo o Lomo Pata Negra, pomodorini gialli semi idratati",
+        "currency": "CHF",
+        "priceAsShown": "17.-",
+        "priceCHF": 17,
+        "priceStatus": "observed_in_supplied_screenshot_not_reconfirmed"
+      }
+    ],
+    "breadOptions": [
+      {
+        "name": "Focaccia classica",
+        "surchargeCHF": null
+      },
+      {
+        "name": "Panino",
+        "surchargeCHF": null
+      },
+      {
+        "name": "Focaccia Carbone",
+        "surchargeCHF": 1
+      }
+    ],
+    "extras": [
+      {
+        "name": "Insalata Fresca, verdure sott’olio",
+        "priceMinCHF": 0.5,
+        "priceMaxCHF": 2
+      },
+      {
+        "name": "Formaggi",
+        "priceMinCHF": 2,
+        "priceMaxCHF": 3.5
+      }
+    ],
+    "freeCompositionMentioned": true,
+    "freeCompositionPriceCHF": null
+  },
+  "locations": [
+    {
+      "id": "bellinzona",
+      "name": "Bellinzona",
+      "timezone": "Europe/Zurich",
+      "address": null,
+      "addressStatus": "unresolved_14a_vs_16",
+      "mapsSearch": "https://www.google.com/maps/search/?api=1&query=Salumee+Bellinzona",
+      "hours": {
+        "sourceScope": "Bellinzona, come indicato sullo screenshot",
+        "status": "observed_not_reconfirmed",
+        "weekly": [
+          {
+            "isoWeekday": 1,
+            "opens": "09:30",
+            "closes": "15:30"
+          },
+          {
+            "isoWeekday": 2,
+            "opens": "09:30",
+            "closes": "15:30"
+          },
+          {
+            "isoWeekday": 3,
+            "opens": "09:30",
+            "closes": "15:30"
+          },
+          {
+            "isoWeekday": 4,
+            "opens": "09:30",
+            "closes": "15:30"
+          },
+          {
+            "isoWeekday": 5,
+            "opens": "09:30",
+            "closes": "17:30"
+          },
+          {
+            "isoWeekday": 6,
+            "opens": "09:30",
+            "closes": "15:00"
+          },
+          {
+            "isoWeekday": 7,
+            "opens": null,
+            "closes": null,
+            "status": "not_specified"
+          }
+        ],
+        "holidays": null,
+        "showOpenNow": false
+      }
+    },
+    {
+      "id": "claro",
+      "name": "Claro",
+      "addressAsShown": "Via alla Stazione 3, 6702 Claro",
+      "addressStatus": "observed_in_supplied_profile_grid_not_reconfirmed",
+      "mapsSearch": "https://www.google.com/maps/search/?api=1&query=Salumee+Claro",
+      "hours": null,
+      "note": "Non ereditare gli orari di Bellinzona."
+    }
+  ],
+  "links": {
+    "instagram": "https://www.instagram.com/salumee.bellinzona/",
+    "uberEats": "https://www.ubereats.com/ch-it/store/salumee-bellinzona/Ci61v_wyVIKlLuKxRmpIug"
+  },
+  "publicationNotes": [
+    "Verificare listino e orari con i titolari.",
+    "Non equiparare prezzi sul posto e Uber Eats.",
+    "Non dedurre allergeni, certificazioni o disponibilità non dichiarate."
+  ]
+}

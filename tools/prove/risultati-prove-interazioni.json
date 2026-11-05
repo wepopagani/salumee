@@ -1,0 +1,230 @@
+{
+ "1440x900": {
+  "geo": {
+   "ps": 0,
+   "pe": 1350,
+   "bt": 2158,
+   "hh": 92,
+   "vh": 900
+  },
+  "single_focaccia_violations": [],
+  "single_focaccia_checked": 102,
+  "handoff_hero_to_traveler_px": [
+   0.01,
+   0.01,
+   -0.02,
+   -0.02
+  ],
+  "handoff_traveler_to_plate_px": [
+   -0.01,
+   -0.06,
+   0.0,
+   -0.01
+  ],
+  "reversible_after_fast_jumps": true,
+  "small_steps_max_lid_move_px_per_4px_step": 3.14,
+  "raf_calls_idle_1s": 0,
+  "look_inside": {
+   "focus": "pin:Mortadella",
+   "y": 716
+  },
+  "pin_keyboard": {
+   "pressed": "false,true,false",
+   "current": "Stracciatella"
+  },
+  "pin_click": "Pesto di pistacchio",
+  "pins_inside_viewport": true,
+  "focus_guard": {
+   "intro": "1",
+   "story": "0",
+   "active": "Scopri il menu"
+  },
+  "menu_direct_top": 100,
+  "menu_direct_traj": [
+   679,
+   117,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100
+  ],
+  "banco_next": [
+   "02Porchetta13.-",
+   "1",
+   "02 / 03"
+  ],
+  "banco_button_moved_px": [
+   0.0,
+   0.0
+  ],
+  "banco_arrow": [
+   "03Tartare16.-",
+   "Tartare",
+   "CHF 16.-CHF 16"
+  ],
+  "banco_swipe_left": "Porchetta",
+  "dialog_open": [
+   true,
+   "Porchetta",
+   "CHF 13.-",
+   "dialog-close"
+  ],
+  "dialog_closed_focus": [
+   false,
+   "link-btn open-dialog"
+  ],
+  "menu_initial_visible": 18,
+  "search_stracciatella": [
+   5,
+   "5 focacce per «stracciatella».",
+   "Mortadella, Coppa, Autunno, Prosciutto Crudo, Tartare"
+  ],
+  "search_pesto": "Caprese, Mortadella, Porchetta",
+  "search_jamon_accent": "Jamón Serrano Ibérico",
+  "search_none": [
+   false,
+   "Nessuna focaccia per «ananas»."
+  ],
+  "search_reset": [
+   "",
+   true,
+   "menu-q"
+  ],
+  "chip_bufala": "Caprese, Salame / S. Piccante, Cotto / Tacchino, Finocchiona",
+  "chip_toggle_off": true,
+  "sede_bellinzona": "BELLINZONA MACELLERIA · PANINOTECA INDIRIZZO Viale Stazione, 6500 Bellinzona ORARI Lunedì – Giovedì 09:30–15:30 Venerdì 09:30–17:30 Sabato 09:30–15:00 Cerca su Maps la sede di Bellinzona (si apre in una nuova scheda)",
+  "sede_claro": "CLARO MACELLERIA · SALUMERIA INDIRIZZO Via alla Stazione 3, 6702 Claro ORARI Gli orari di Claro non sono indicati qui: chiedi su Instagram (si apre in una nuova scheda) . Cerca su Maps la sede di Claro (si apre in una nuova scheda)",
+  "claro_has_hours": false,
+  "page_mentions_chiuso": false,
+  "page_mentions_domenica": false,
+  "page_mentions_aperto_adesso": false,
+  "overflow_x": 0,
+  "images_broken": [],
+  "errors": []
+ },
+ "390x844": {
+  "geo": {
+   "ps": 0,
+   "pe": 886,
+   "bt": 1666.1875,
+   "hh": 64,
+   "vh": 844
+  },
+  "single_focaccia_violations": [],
+  "single_focaccia_checked": 84,
+  "handoff_hero_to_traveler_px": [
+   -0.0,
+   0.0,
+   -0.02,
+   -0.02
+  ],
+  "handoff_traveler_to_plate_px": [
+   0,
+   -0.03,
+   -0.0,
+   -0.01
+  ],
+  "reversible_after_fast_jumps": true,
+  "small_steps_max_lid_move_px_per_4px_step": 1.64,
+  "raf_calls_idle_1s": 0,
+  "look_inside": {
+   "focus": "pin:Mortadella",
+   "y": 470
+  },
+  "pin_keyboard": {
+   "pressed": "false,true,false",
+   "current": "Stracciatella"
+  },
+  "pin_click": "Pesto di pistacchio",
+  "pins_inside_viewport": true,
+  "focus_guard": {
+   "intro": "1",
+   "story": "0",
+   "active": "Scopri il menu"
+  },
+  "menu_direct_top": 72,
+  "menu_direct_traj": [
+   542,
+   75,
+   72,
+   72,
+   72,
+   72,
+   72,
+   72,
+   72,
+   72
+  ],
+  "mobile_nav_open": [
+   "true",
+   "flex"
+  ],
+  "mobile_nav_escape": [
+   "false",
+   "nav-toggle"
+  ],
+  "mobile_nav_to_sedi": [
+   "false",
+   72
+  ],
+  "banco_next": [
+   "02Porchetta13.-",
+   "1",
+   "02 / 03"
+  ],
+  "banco_button_moved_px": [
+   0,
+   0.0
+  ],
+  "banco_arrow": [
+   "03Tartare16.-",
+   "Tartare",
+   "CHF 16.-CHF 16"
+  ],
+  "banco_swipe_left": "Porchetta",
+  "dialog_open": [
+   true,
+   "Porchetta",
+   "CHF 13.-",
+   "dialog-close"
+  ],
+  "dialog_closed_focus": [
+   false,
+   "link-btn open-dialog"
+  ],
+  "menu_initial_visible": 6,
+  "search_stracciatella": [
+   5,
+   "5 focacce per «stracciatella».",
+   "Mortadella, Coppa, Autunno, Prosciutto Crudo, Tartare"
+  ],
+  "search_pesto": "Caprese, Mortadella, Porchetta",
+  "search_jamon_accent": "Jamón Serrano Ibérico",
+  "search_none": [
+   false,
+   "Nessuna focaccia per «ananas»."
+  ],
+  "search_reset": [
+   "",
+   true,
+   "menu-q"
+  ],
+  "chip_bufala": "Caprese, Salame / S. Piccante, Cotto / Tacchino, Finocchiona",
+  "chip_toggle_off": true,
+  "menu_collapsed_visible": 6,
+  "menu_expanded_visible": 18,
+  "sede_bellinzona": "BELLINZONA MACELLERIA · PANINOTECA INDIRIZZO Viale Stazione, 6500 Bellinzona ORARI Lunedì – Giovedì 09:30–15:30 Venerdì 09:30–17:30 Sabato 09:30–15:00 Cerca su Maps la sede di Bellinzona (si apre in una nuova scheda)",
+  "sede_claro": "CLARO MACELLERIA · SALUMERIA INDIRIZZO Via alla Stazione 3, 6702 Claro ORARI Gli orari di Claro non sono indicati qui: chiedi su Instagram (si apre in una nuova scheda) . Cerca su Maps la sede di Claro (si apre in una nuova scheda)",
+  "claro_has_hours": false,
+  "page_mentions_chiuso": false,
+  "page_mentions_domenica": false,
+  "page_mentions_aperto_adesso": false,
+  "overflow_x": 0,
+  "images_broken": [],
+  "errors": []
+ }
+}

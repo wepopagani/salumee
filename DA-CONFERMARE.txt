@@ -1,0 +1,44 @@
+SALUMÉE V3.1 — INFORMAZIONI DA RICONFERMARE PRIMA DELLA PUBBLICAZIONE
+
+MENU E PREZZI
+- Le 18 voci e i prezzi sono trascritti dalla storia Instagram «Menu» (etichetta
+  «42 sett»). Attualità non verificata con i titolari.
+- Mortadella «10/11.-»: non è indicato quale prezzo corrisponda a quale pesto.
+  In pagina resta «10/11.-» con una nota.
+- Il menu ha il marchio di Bellinzona: in pagina è etichettato «Il menu ·
+  Bellinzona». Non è noto se valga anche per Claro.
+- Prezzi in sede e su Uber Eats possono differire: non sono stati uniti.
+- Le descrizioni non sono una scheda allergeni.
+
+ORARI
+- Solo Bellinzona (storia «51 sett»): lun–gio 09:30–15:30, ven 09:30–17:30,
+  sab 09:30–15:00. Domenica e festivi non specificati: non mostrati.
+- Claro: orari assenti; la pagina rimanda a Instagram.
+- Nessun indicatore «aperto adesso».
+
+INDIRIZZI
+- Bellinzona: Viale Stazione 14a (bio) o 16 (Uber Eats, post Notte Bianca).
+  In pagina «Viale Stazione, 6500 Bellinzona», senza numero civico.
+- Claro: «Via alla Stazione 3, 6702 Claro», letto nel manifesto d'apertura.
+- I collegamenti Maps sono ricerche, non pin verificati.
+
+MARCHIO E IMMAGINI
+- Logo: ritaglio di uno screenshot, da sostituire con il file originale.
+- Le focacce sono immagini illustrative AI: da approvare o sostituire.
+- Insegna e foto del menu provengono dai canali Salumée: chiedere conferma
+  dell'uso e possibilmente gli originali.
+- Claro è descritta come «Macelleria · Salumeria», come nella comunicazione
+  d'apertura; Bellinzona come «Macelleria · Paninoteca», come sull'insegna.
+
+SCENA INIZIALE (V3.1)
+- Porchetta e Tartare non si aprono ancora a strati: mancano i livelli (vedi
+  MATERIALI-E-PROMPT.txt). Prima di pubblicare: produrli, controllarli con
+  tools/aggiungi_livelli.py e approvarli visivamente.
+- Le brevi frasi sugli ingredienti nella scena (es. «Fette sottili e arrostite»)
+  sono testi scritti per la proposta, non dichiarazioni del locale: da
+  approvare. Gli ingredienti elencati seguono il menu e hero-recipes.json.
+- Le immagini delle tre focacce restano illustrative (AI).
+
+PUBBLICAZIONE
+- Rimuovere <meta name="robots" content="noindex, nofollow"> solo al momento
+  della pubblicazione. Aggiungere eventuali dati legali reali (impressum).

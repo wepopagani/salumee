@@ -1,0 +1,13 @@
+# Salumée V3.1 — demo su Netlify.
+# Pubblica solo ciò che serve alla pagina (niente sorgenti, prove o documenti).
+[build]
+  command = "rm -rf _site && mkdir -p _site/assets && cp -r index.html robots.txt css js _site/ && cp -r assets/img assets/fonts _site/assets/"
+  publish = "_site"
+
+# Demo non indicizzata dai motori di ricerca
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

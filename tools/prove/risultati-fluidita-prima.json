@@ -1,0 +1,342 @@
+{
+ "1440x900": {
+  "scroll_scena_e_passaggio": {
+   "frames": 176,
+   "p50": 16.7,
+   "p95": 33.3,
+   "max": 50.1,
+   "sopra_20ms": 25,
+   "sopra_34ms": 2,
+   "tracing": {
+    "decode": {
+     "n": 220,
+     "ms": 8.3
+    },
+    "layerize": {
+     "n": 178,
+     "ms": 49.9
+    },
+    "layout": {
+     "n": 58,
+     "ms": 10.5
+    },
+    "paint": {
+     "n": 214,
+     "ms": 94.3
+    },
+    "prepaint": {
+     "n": 273,
+     "ms": 39.6
+    },
+    "raster": {
+     "n": 2700,
+     "ms": 998.5
+    },
+    "script_raf": {
+     "n": 355,
+     "ms": 61.1
+    },
+    "stile": {
+     "n": 123,
+     "ms": 26.5
+    }
+   }
+  },
+  "scroll_indietro": {
+   "frames": 126,
+   "p50": 16.7,
+   "p95": 33.4,
+   "max": 50.1,
+   "sopra_20ms": 21,
+   "sopra_34ms": 6,
+   "tracing": {
+    "decode": {
+     "n": 154,
+     "ms": 3.2
+    },
+    "layerize": {
+     "n": 128,
+     "ms": 26.8
+    },
+    "layout": {
+     "n": 36,
+     "ms": 7.6
+    },
+    "paint": {
+     "n": 158,
+     "ms": 84.2
+    },
+    "prepaint": {
+     "n": 191,
+     "ms": 30.4
+    },
+    "raster": {
+     "n": 1895,
+     "ms": 731.9
+    },
+    "script_raf": {
+     "n": 248,
+     "ms": 42.0
+    },
+    "stile": {
+     "n": 81,
+     "ms": 21.4
+    }
+   }
+  },
+  "cambi_ricetta_aperta": {
+   "frames": 248,
+   "p50": 16.7,
+   "p95": 33.3,
+   "max": 50.1,
+   "sopra_20ms": 20,
+   "sopra_34ms": 4,
+   "tracing": {
+    "decode": {
+     "n": 297,
+     "ms": 4.8
+    },
+    "layerize": {
+     "n": 250,
+     "ms": 51.3
+    },
+    "layout": {
+     "n": 43,
+     "ms": 20.8
+    },
+    "paint": {
+     "n": 408,
+     "ms": 121.6
+    },
+    "prepaint": {
+     "n": 291,
+     "ms": 54.6
+    },
+    "raster": {
+     "n": 2959,
+     "ms": 1305.2
+    },
+    "script_raf": {
+     "n": 512,
+     "ms": 171.3
+    },
+    "stile": {
+     "n": 325,
+     "ms": 87.2
+    }
+   }
+  },
+  "banco": {
+   "frames": 176,
+   "p50": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "sopra_20ms": 0,
+   "sopra_34ms": 0,
+   "tracing": {
+    "decode": {
+     "n": 68,
+     "ms": 6.7
+    },
+    "layerize": {
+     "n": 178,
+     "ms": 70.7
+    },
+    "layout": {
+     "n": 55,
+     "ms": 25.2
+    },
+    "paint": {
+     "n": 225,
+     "ms": 168.2
+    },
+    "prepaint": {
+     "n": 228,
+     "ms": 25.2
+    },
+    "raster": {
+     "n": 1040,
+     "ms": 234.3
+    },
+    "script_raf": {
+     "n": 224,
+     "ms": 69.7
+    },
+    "stile": {
+     "n": 165,
+     "ms": 56.5
+    }
+   }
+  }
+ },
+ "390x844": {
+  "scroll_scena_e_passaggio": {
+   "frames": 200,
+   "p50": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "sopra_20ms": 0,
+   "sopra_34ms": 0,
+   "tracing": {
+    "decode": {
+     "n": 206,
+     "ms": 8.2
+    },
+    "layerize": {
+     "n": 202,
+     "ms": 45.6
+    },
+    "layout": {
+     "n": 118,
+     "ms": 21.4
+    },
+    "paint": {
+     "n": 289,
+     "ms": 88.6
+    },
+    "prepaint": {
+     "n": 202,
+     "ms": 26.1
+    },
+    "raster": {
+     "n": 1239,
+     "ms": 383.5
+    },
+    "script_raf": {
+     "n": 398,
+     "ms": 68.5
+    },
+    "stile": {
+     "n": 146,
+     "ms": 23.7
+    }
+   }
+  },
+  "scroll_indietro": {
+   "frames": 109,
+   "p50": 16.7,
+   "p95": 16.7,
+   "max": 33.3,
+   "sopra_20ms": 1,
+   "sopra_34ms": 0,
+   "tracing": {
+    "decode": {
+     "n": 107,
+     "ms": 2.2
+    },
+    "layerize": {
+     "n": 112,
+     "ms": 20.4
+    },
+    "layout": {
+     "n": 58,
+     "ms": 10.9
+    },
+    "paint": {
+     "n": 162,
+     "ms": 48.4
+    },
+    "prepaint": {
+     "n": 112,
+     "ms": 19.5
+    },
+    "raster": {
+     "n": 655,
+     "ms": 194.1
+    },
+    "script_raf": {
+     "n": 220,
+     "ms": 32.0
+    },
+    "stile": {
+     "n": 76,
+     "ms": 19.4
+    }
+   }
+  },
+  "cambi_ricetta_aperta": {
+   "frames": 273,
+   "p50": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "sopra_20ms": 0,
+   "sopra_34ms": 0,
+   "tracing": {
+    "decode": {
+     "n": 249,
+     "ms": 14.6
+    },
+    "layerize": {
+     "n": 275,
+     "ms": 47.4
+    },
+    "layout": {
+     "n": 43,
+     "ms": 22.3
+    },
+    "paint": {
+     "n": 411,
+     "ms": 83.5
+    },
+    "prepaint": {
+     "n": 275,
+     "ms": 47.1
+    },
+    "raster": {
+     "n": 1378,
+     "ms": 506.7
+    },
+    "script_raf": {
+     "n": 575,
+     "ms": 183.7
+    },
+    "stile": {
+     "n": 368,
+     "ms": 86.5
+    }
+   }
+  },
+  "banco": {
+   "frames": 176,
+   "p50": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "sopra_20ms": 0,
+   "sopra_34ms": 0,
+   "tracing": {
+    "decode": {
+     "n": 55,
+     "ms": 1.2
+    },
+    "layerize": {
+     "n": 179,
+     "ms": 19.3
+    },
+    "layout": {
+     "n": 66,
+     "ms": 17.1
+    },
+    "paint": {
+     "n": 227,
+     "ms": 68.6
+    },
+    "prepaint": {
+     "n": 179,
+     "ms": 17.9
+    },
+    "raster": {
+     "n": 364,
+     "ms": 78.2
+    },
+    "script_raf": {
+     "n": 224,
+     "ms": 27.6
+    },
+    "stile": {
+     "n": 165,
+     "ms": 39.0
+    }
+   }
+  }
+ }
+}
