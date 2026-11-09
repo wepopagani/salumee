@@ -4,6 +4,7 @@
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const t = (source, values) => window.SalumeeI18n.t(source, values);
   const mqDesk = matchMedia('(min-width: 900px)');
   const onChange = (m, fn) => (m.addEventListener ? m.addEventListener('change', fn) : m.addListener(fn));
 
@@ -14,7 +15,7 @@
   const setMenu = open => {
     nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Chiudi la navigazione' : 'Apri la navigazione');
+    toggle.setAttribute('aria-label', t(open ? 'Chiudi la navigazione' : 'Apri la navigazione'));
     if (!open) closeSubs();
   };
   toggle.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
@@ -94,11 +95,11 @@
   const PHONE = '41764990322';
   const state = { paninoteca: '', macelleria: '' };     // prodotto selezionato nel percorso
   function message({ context = 'general', product = '' } = {}) {
-    const lines = ['Ciao Salumée! Vorrei ordinare per il ritiro.'];
-    if (context === 'paninoteca' && product) lines.push(`Prodotto: focaccia ${product}.`);
-    else if (context === 'macelleria') { lines.push('Reparto: macelleria.'); lines.push(product ? `Prodotti richiesti: ${product}.` : 'Prodotti richiesti: ...'); }
-    else lines.push('Prodotti richiesti: ...');
-    lines.push('Quantità: ...', 'Sede di ritiro (Bellinzona o Claro): ...', 'Orario desiderato: ...', 'Mi confermate disponibilità e orario? Grazie!');
+    const lines = [t('Ciao Salumée! Vorrei ordinare per il ritiro.')];
+    if (context === 'paninoteca' && product) lines.push(t('Prodotto: focaccia {product}.', { product: t(product) }));
+    else if (context === 'macelleria') { lines.push(t('Reparto: macelleria.')); lines.push(product ? t('Prodotti richiesti: {product}.', { product: t(product) }) : t('Prodotti richiesti: ...')); }
+    else lines.push(t('Prodotti richiesti: ...'));
+    lines.push(...['Quantità: ...', 'Sede di ritiro (Bellinzona o Claro): ...', 'Orario desiderato: ...', 'Mi confermate disponibilità e orario? Grazie!'].map(line => t(line)));
     return lines.join('\n');
   }
   const url = opt => `https://wa.me/${PHONE}?text=${encodeURIComponent(message(opt))}`;
@@ -109,10 +110,10 @@
   }
   function refresh() {
     $$('[data-pickup]').forEach(link => { link.href = url({ context: link.dataset.pickup, product: productFor(link) }); });
-    $$('[data-pickup-recipe]').forEach(el => { if (state.paninoteca) el.textContent = state.paninoteca; });
+    $$('[data-pickup-recipe]').forEach(el => { if (state.paninoteca) el.textContent = t(state.paninoteca); });
     $$('[data-pickup-label]').forEach(el => {
       const ctx = $('[data-pickup]', el.closest('section'))?.dataset.pickup;
-      el.textContent = ctx === 'paninoteca' && state.paninoteca ? ` con la focaccia ${state.paninoteca}` : '';
+      el.textContent = ctx === 'paninoteca' && state.paninoteca ? ` ${t('con la focaccia {product}', { product: t(state.paninoteca) })}` : '';
     });
   }
   // l'href resta corretto per click, tastiera, menu contestuale e copia del link
@@ -123,4 +124,8 @@
     set(context, product) { state[context] = product || ''; refresh(); }
   });
   refresh();
+  document.addEventListener('salumee:languagechange', () => {
+    refresh();
+    toggle.setAttribute('aria-label', t(nav.classList.contains('is-open') ? 'Chiudi la navigazione' : 'Apri la navigazione'));
+  });
 })();

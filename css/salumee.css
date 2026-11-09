@@ -814,3 +814,36 @@ body.dialog-open{overflow:hidden}
   .mac-hero-v5 .hams-controls{gap:5px}
   .ham-thumb-name{font-size:8px}
 }
+
+/* Language control stays at the right edge of the header in every department. */
+.language-picker{position:relative;flex:none;z-index:65;margin-left:2px}
+.language-picker summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid rgba(243,233,213,.38);border-radius:999px;list-style:none;cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.08em;transition:background-color .2s,color .2s,border-color .2s}
+.language-picker summary::-webkit-details-marker{display:none}
+.language-picker summary:hover,.language-picker[open] summary{background:var(--crema);color:var(--carbone);border-color:var(--crema)}
+.language-globe{width:18px;height:18px;flex:none}
+.language-chevron{width:12px;height:12px;flex:none;transition:transform .2s}
+.language-picker[open] .language-chevron{transform:rotate(180deg)}
+.language-options{position:absolute;right:0;top:calc(100% + 12px);width:192px;padding:7px;background:var(--crema);color:var(--carbone);border-radius:14px;box-shadow:0 16px 40px #0005;border:1px solid var(--carta)}
+.language-options button{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:44px;padding:8px 12px;border:0;border-radius:8px;background:none;text-align:left;font:700 14px var(--f-text);cursor:pointer}
+.language-options button:hover{background:var(--carta)}
+.language-options button[aria-pressed="true"]{background:var(--carbone);color:var(--crema)}
+.language-code{font-size:10px;letter-spacing:.1em;opacity:.65}
+@media(min-width:900px){
+  .site-nav{gap:clamp(10px,1.2vw,20px)}
+  .department-link{font-size:clamp(17px,1.4vw,20px);padding-inline:12px}
+  .nav-link{font-size:clamp(18px,1.7vw,28px)}
+  .nav-panel,.nav-list{gap:clamp(14px,1.8vw,28px)}
+}
+@media(max-width:599.98px){
+  :root{--hh:108px}
+  .site-nav{display:grid;grid-template-columns:1fr auto auto;grid-template-rows:48px 44px;gap:4px 12px;align-content:center}
+  .site-nav>.brand{grid-column:1;grid-row:1;justify-self:start;margin:0}
+  .site-nav .logo{height:42px}
+  .js .site-nav>.nav-toggle{grid-column:2;grid-row:1;width:44px;min-width:44px;height:44px;margin:0}
+  .language-picker{grid-column:3;grid-row:1;margin:0}
+  .language-picker summary{min-height:40px;gap:6px;padding-inline:10px}
+  .department-switch{grid-column:1/-1;grid-row:2;justify-self:stretch;margin:0}
+  .department-link{flex:1;min-height:36px;font-size:17px;padding-inline:10px}
+  .language-options{top:calc(100% + 8px)}
+  .no-js .site-nav{display:flex}
+}

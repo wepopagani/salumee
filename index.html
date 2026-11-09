@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/img/prosciutti/prosciutto-2.webp" type="image/webp">
 <script>(function(d){d.classList.replace('no-js','js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('rm')}catch(e){}try{var t=+localStorage.getItem('salumee-ingresso');if(location.hash||(t&&Date.now()-t<432e5))d.classList.add('gate-seen')}catch(e){}})(document.documentElement);</script>
-<link rel="stylesheet" href="css/salumee.css">
+<link rel="stylesheet" href="css/salumee.css?v=20261109-languages">
 </head>
 <body class="page-macelleria">
 <!-- Export statico: modificare HTML, CSS e JavaScript come indicato nel README. -->
@@ -43,6 +43,16 @@
       </ul>
       <a class="btn-red nav-cta" href="#ordina">Ordina <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-down"/></svg></a>
     </div>
+    <details class="language-picker">
+      <summary aria-label="Scegli la lingua"><svg class="language-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-current-language>IT</span><svg class="language-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 4 3 3 3-3"/></svg></summary>
+      <div class="language-options">
+        <button type="button" data-language="it" lang="it" aria-pressed="true"><span>Italiano</span><span class="language-code" aria-hidden="true">IT</span></button>
+        <button type="button" data-language="es" lang="es" aria-pressed="false"><span>Español</span><span class="language-code" aria-hidden="true">ES</span></button>
+        <button type="button" data-language="fr" lang="fr" aria-pressed="false"><span>Français</span><span class="language-code" aria-hidden="true">FR</span></button>
+        <button type="button" data-language="de" lang="de" aria-pressed="false"><span>Deutsch</span><span class="language-code" aria-hidden="true">DE</span></button>
+        <button type="button" data-language="en" lang="en" aria-pressed="false"><span>English</span><span class="language-code" aria-hidden="true">EN</span></button>
+      </div>
+    </details>
   </nav>
 </header>
 
@@ -183,8 +193,10 @@
     <p>Proposta di design, non pubblicata. Focacce: immagini illustrative (AI). Logo, insegna, banco e foto del menu: riferimenti dai canali Salumée.</p>
   </div>
 </footer>
-<script src="js/common.js"></script>
-<script src="js/macelleria.js"></script>
-<script src="js/reviews.js" defer></script>
+<script src="js/translations.js?v=20261109-languages"></script>
+<script src="js/i18n.js?v=20261109-languages"></script>
+<script src="js/common.js?v=20261109-languages"></script>
+<script src="js/macelleria.js?v=20261109-languages"></script>
+<script src="js/reviews.js?v=20261109-languages" defer></script>
 </body>
 </html>

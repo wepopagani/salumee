@@ -5,6 +5,7 @@
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const t = source => window.SalumeeI18n.t(source);
   const root = $('[data-hams]');
   if (!root) return;
   const DATA = JSON.parse($('#ham-data').textContent);
@@ -42,14 +43,14 @@
 
   function fill(i) {
     if (i < 0) {
-      which.textContent = 'Quattro pezzi'; of.textContent = '';
-      form.textContent = ''; text.textContent = 'Tocca un prosciutto o usa i controlli qui sotto.';
+      which.textContent = t('Quattro pezzi'); of.textContent = '';
+      form.textContent = ''; text.textContent = t('Tocca un prosciutto o usa i controlli qui sotto.');
       lens.style.backgroundImage = '';
       return;
     }
     const d = DATA[i], r = lens.offsetWidth / 2 || 56;
-    which.textContent = d.nome; of.textContent = '';
-    form.textContent = d.forma; text.textContent = d.testo;
+    which.textContent = t(d.nome); of.textContent = '';
+    form.textContent = t(d.forma); text.textContent = t(d.testo);
     // lente: lo stesso ritaglio alla risoluzione originale, centrato su un punto del pezzo
     lens.style.backgroundImage = `url("${d.file}")`;
     lens.style.backgroundSize = `${d.w}px ${d.h}px`;
@@ -91,6 +92,7 @@
   addEventListener('resize', () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(layout); });
   desk.addEventListener?.('change', layout);
   fill(-1);
+  document.addEventListener('salumee:languagechange', () => fill(cur));
 
   // entrata sfalsata la prima volta che la sezione entra in vista
   if ('IntersectionObserver' in window) {

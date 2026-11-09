@@ -8,6 +8,7 @@
   const doc = document.documentElement;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const t = (source, values) => window.SalumeeI18n.t(source, values);
   const clamp = (v, a = 0, b = 1) => (v < a ? a : v > b ? b : v);
   const seg = (p, a, b) => clamp((p - a) / (b - a));
   const ease = t => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -202,13 +203,13 @@
     probe.style.cssText = 'visibility:hidden;transform:none';
     pinsWrap.append(probe);
     const label = $('.pin-label', probe);
-    REC.forEach(r => { r.pinW = r.d.ingredients.map(g => { label.textContent = g.name; return probe.offsetWidth; }); });
+    REC.forEach(r => { r.pinW = r.d.ingredients.map(g => { label.textContent = t(g.name); return probe.offsetWidth; }); });
     probe.remove();
     M.pinW = info.pinW;
   }
   function reserveIngHeight() {
     const w = ingList.getBoundingClientRect().width;
-    const key = w + '|' + (document.fonts ? document.fonts.status : '');
+    const key = w + '|' + window.SalumeeI18n.language + '|' + (document.fonts ? document.fonts.status : '');
     if (!w || key === M.ingKey) return;
     M.ingKey = key;
     const probe = ingList.cloneNode(false);
@@ -537,8 +538,8 @@
   function afterSwitch() { if (pending && pending !== shown && pending.decoded) startSwitch(pending); }
 
   const ingHtml = (r, cur) => r.d.ingredients.map((g, i) =>
-    `<li data-ing="${i}"${i === cur ? ' class="is-current"' : ''}><h3 class="ing-name">${esc(g.name)}</h3><p>${esc(g.text)}</p></li>`).join('');
-  const altFor = r => `Focaccia con ${r.d.caption.join(' ').replace(/^./, c => c.toLowerCase())}. Immagine illustrativa.`;
+    `<li data-ing="${i}"${i === cur ? ' class="is-current"' : ''}><h3 class="ing-name">${esc(t(g.name))}</h3><p>${esc(t(g.text))}</p></li>`).join('');
+  const altFor = r => t('Focaccia con {ingredients}. Immagine illustrativa.', { ingredients: r.d.caption.map(line => t(line)).join(' ') });
   function setInfo(r) {
     const prev = info;
     info = r;
@@ -548,13 +549,13 @@
     sel = k >= 0 ? k : 0;
     if (ingList.dataset.recipe !== r.id) { ingList.innerHTML = ingHtml(r, sel); ingList.dataset.recipe = r.id; }
     const hadFocus = pins.indexOf(document.activeElement);
-    pins.forEach((p, i) => { p.hidden = !ing[i]; if (ing[i]) $('.pin-label', p).textContent = ing[i].name; });
+    pins.forEach((p, i) => { p.hidden = !ing[i]; if (ing[i]) $('.pin-label', p).textContent = t(ing[i].name); });
     if (hadFocus >= 0 && pins[hadFocus].hidden) pins[0].focus({ preventScroll: true });
     selectIngredient(sel);
-    if (storyRecipe) storyRecipe.textContent = r.d.name;
-    if (caption) caption.innerHTML = r.d.caption.map(esc).join('<br> ');
+    if (storyRecipe) storyRecipe.textContent = t(r.d.name);
+    if (caption) caption.innerHTML = r.d.caption.map(line => esc(t(line))).join('<br> ');
     posterImg.alt = altFor(r);
-    canvas.dataset.label = r.d.caption.join(' ');
+    canvas.dataset.label = r.d.caption.map(line => t(line)).join(' ');
     if (r.pinW) M.pinW = r.pinW;
     // il ritiro segue la ricetta visibile
     if (window.SalumeePickup) window.SalumeePickup.set('paninoteca', r.d.name);
@@ -685,7 +686,7 @@
     // da vicino: per la Mortadella l'ultimo fotogramma, aperto, mostra gli strati
     const rr = REC.find(x => x.d.bancoIndex === bancoIndex);
     img.src = rr && rr.d.sequence && rr.d.sequence.open ? rr.d.sequence.open : (plateImgs[bancoIndex].currentSrc || plateImgs[bancoIndex].getAttribute('src'));
-    img.alt = `${$('.panel-name', panel).textContent}, immagine illustrativa`;
+    img.alt = t('{product}, immagine illustrativa', { product: $('.panel-name', panel).textContent });
     dialog.showModal();
     document.body.classList.add('dialog-open');
     $('.dialog-close').focus();
@@ -720,7 +721,18 @@
   const chips = $$('.chip');
   const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/’/g, "'");
   const escHtml = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  dishes.forEach(d => { $$('.dish-name, .dish-desc', d).forEach(n => { n._raw = n.textContent; }); });
+  dishes.forEach(d => {
+    d._searchSource = d.dataset.search;
+    $$('.dish-name, .dish-desc', d).forEach(node => { node._source = window.SalumeeI18n.originalText(node); });
+  });
+  function refreshSearchText() {
+    dishes.forEach(d => {
+      const nodes = $$('.dish-name, .dish-desc', d);
+      nodes.forEach(node => { node._raw = t(node._source); });
+      d.dataset.search = fold([d._searchSource, ...nodes.map(node => node._raw)].join(' '));
+    });
+  }
+  refreshSearchText();
   function mark(node, words) {
     const raw = node._raw;
     if (!words.length) { node.textContent = raw; return; }
@@ -749,7 +761,7 @@
     });
     empty.hidden = n > 0;
     $('.empty-q').textContent = raw;
-    status.textContent = !term ? '' : n ? `${n} ${n === 1 ? 'focaccia' : 'focacce'} per «${raw}».` : `Nessuna focaccia per «${raw}».`;
+    status.textContent = !term ? '' : t(n ? n === 1 ? '{count} focaccia per «{query}».' : '{count} focacce per «{query}».' : 'Nessuna focaccia per «{query}».', { count: n, query: raw });
     reset1.hidden = !term;
     chips.forEach(c => c.setAttribute('aria-pressed', String(fold(c.dataset.q) === term)));
     const collapse = !term && !expanded && !mqDesk.matches;
@@ -773,6 +785,22 @@
   });
   onChange(mqDesk, applySearch);
   applySearch();
+
+  document.addEventListener('salumee:languagechange', () => {
+    ingList.dataset.recipe = '';
+    setInfo(info);
+    remeasure();
+    refreshSearchText();
+    applySearch();
+    if (dialog.open) {
+      const panel = panels[bancoIndex];
+      $('#dialog-title').textContent = $('.panel-name', panel).textContent;
+      $('.dialog-recipe').textContent = $('.panel-recipe', panel).textContent;
+      $('.dialog-image img').alt = t('{product}, immagine illustrativa', { product: $('.panel-name', panel).textContent });
+    }
+    lastKey = '';
+    wake();
+  });
 
   setMode();
 })();
