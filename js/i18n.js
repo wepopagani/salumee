@@ -68,9 +68,11 @@
     attributeBindings.forEach(({ element, attribute, source }) => element.setAttribute(attribute, translate(source)));
     links.forEach(({ element, original }) => {
       const url = new URL(original, location.href);
-      if (url.origin === location.origin && /(?:^|\/)(?:index|macelleria|paninoteca)\.html$/.test(url.pathname)) {
+      const path = url.pathname.replace(/\/+$/, '') || '/';
+      const sitePage = path === '/' || /(?:^|\/)(?:index|macelleria|paninoteca)(?:\.html)?$/.test(path);
+      if (url.origin === location.origin && sitePage) {
         url.searchParams.set('lang', language);
-        element.setAttribute('href', `${url.pathname.split('/').pop()}${url.search}${url.hash}`);
+        element.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
       } else if (url.hostname === 'wa.me' && !element.hasAttribute('data-pickup')) {
         const message = url.searchParams.get('text');
         if (message) { url.searchParams.set('text', translateMessage(message)); element.href = url.href; }
